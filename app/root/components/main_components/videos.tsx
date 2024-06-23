@@ -1,9 +1,10 @@
 import React from 'react';
 import Video from 'next-video';
 import Link from 'next/link';
+import { Asset } from 'next-video/dist/assets.js';
 
 interface VideosProps {
-  video: string;
+  video: Asset;
   title:string;
   description:string;
   link:string;
