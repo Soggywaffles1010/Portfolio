@@ -2,32 +2,437 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.bg-gradient-radial2{
+  position: relative;
+  color: rgb(var(--foreground-rgb));
+  background-color: black; /* Ensures the entire background is black */
+  overflow: hidden;
+  z-index: -1;
+  
+}
+.bg-gradient-radial2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.2),
+      black 2%
+    ) no-repeat;
+    
+  background-size: cover;
+  background-position: center; /* Positions the radial gradient center at the center of the screen */
+  filter: blur(50px);
+  animation: animateGradient2 5s forwards; /* Adjust animation duration as needed */
+   
+}
+@keyframes animateGradient2 {
+  0%,50%{
+    background: radial-gradient(
+      circle at  center,
+      rgba(255, 255, 255, 0),
+      black 30%
+    )  ;
+    
+
+  }
+  100%{
+    background: radial-gradient(
+      circle at  center,
+      rgba(255, 255, 255, 0.2),
+      black 30%
+    )  ;
+   
+  }
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.bg-gradient-radial {
+  position: relative;
+  color: rgb(var(--foreground-rgb));
+  background-color: black; /* Ensures the entire background is black */
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bg-gradient-radial::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 2%
+    ) no-repeat;
+  background-size: cover;
+  background-position: center; /* Positions the radial gradient center at the center of the screen */
+  filter: blur(50px);
+  animation: animateGradient 5s infinite ease-in-out; /* Adjust animation duration as needed */
+   
+}
+
+@keyframes animateGradient {
+  0% , 100%{
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 30%
+    )  
+    
+  }
+
+  2% , 98%{
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 31%
+    )  
+  }
+  5%, 95% {
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 32%
+    ) 
+  }
+  8% , 92%{
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 33%
+    )  
+  }
+  10%, 90% {
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 34%
+    )  
+  }
+  12% , 88%{
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 35%
+    )  
+  }
+  15%, 85% {
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 36%
+    ) 
+  }
+  18% , 83%{
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 37%
+    )  
+  }
+  20%, 80% {
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 38%
+    )  
+  }
+  23%, 78% {
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 39%
+    )  
+  }
+  25%, 75% {
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 40%
+    )  
+  }
+  28%, 73% {
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 41%
+    )  
+  }
+  
+  30%, 70% {
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 42%
+    ) 
+  }
+  33%, 68% {
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 43%
+    )  
+  }
+  35%, 65% {
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 44%
+    )  
+  }
+  38%, 63% {
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 45%
+    )  
+  }
+  40%, 60% {
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 46%
+    )  
+  }
+  42%, 58% {
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 47%
+    )  
+  }
+  45%, 55% {
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 48%
+    )  
+  }
+  48%, 53% {
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 49%
+    )  
+  }
+  50% {
+    background: radial-gradient(
+      circle at 70% center,
+      rgba(255, 255, 255, 0.2),
+      black 50%
+    )  
+  }
+  
+}
+
+@keyframes carouselNext{
+  0%{
+    transform: translateX(50%) scale(0.7);
+    opacity: 0%;
+     
+  }
+  100%{
+    transform: translateX(0%) scale(1);
+    opacity: 100%;
+  
+  }
+}
+@keyframes carouselPrev{
+  0%{
+    transform: translateX(-50%) scale(0.7);
+    opacity: 0%;
+     
+  }
+  100%{
+    transform: translateX(0%) scale(1);
+    opacity: 100%;
+  
+  }
+}
+@keyframes scrollAnimate3 {
+  0%{
+    transform: translateY(-80%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(-150%);
+    opacity: 1;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+@keyframes scrollAnimate {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+}
+@keyframes scrollAnimate2 {
+  0% {
+     
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+     
+    opacity: 1;
+  }
+}
+@keyframes blink {
+ 
+  50% {
+    color: rgb(108, 209, 243);
+  }
+  0%, 100% {
+    color: rgb(229, 87, 229);
+  }
+}
+.blinking-text {
+  animation: blink 1s infinite;
 }
 
+.hidden-text {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.scroll-animate-text {
+  visibility: visible;
+  opacity: 1;
+  animation: scrollAnimate 5s forwards;
+}
+
+.scroll-animate-desc {
+  visibility: visible;
+  opacity: 1;
+  animation: scrollAnimate3 6s forwards;
+}
+.scroll-animate-cardNext {
+  visibility: visible;
+  opacity: 1;
+  /* animation: scrollAnimate2 1s forwards; */
+  animation: carouselNext 2s forwards;
+}
+.scroll-animate-cardPrev {
+  visibility: visible;
+  opacity: 1;
+  /* animation: scrollAnimate2 1s forwards; */
+  animation: carouselPrev 2s forwards;
+}
+
+.scroll-animate-text2 {
+  visibility: visible;
+  opacity: 1;
+  animation: scrollAnimate2 5s forwards;
+}
+
+.scroll-animate-text-1 {
+  animation-delay: 0s;
+  opacity: 0;
+
+}
+
+.scroll-animate-text-2 {
+  animation-delay: 3s;
+  opacity: 0;
+
+}
+
+.scroll-animate-text-3 {
+  animation-delay: 6s;
+  opacity: 0;
+
+}
+
+.scroll-animate-text-4 {
+  animation-delay: 9s;
+  opacity: 0;
+
+}
+
+.scroll-animate-text-5 {
+  animation-delay: 12s;
+  opacity: 0;
+
+}
+
+.scroll-animate-text-6 {
+  animation-delay: 15s;
+  opacity: 0;
+
+}
+.scroll-animate-text-7 {
+  animation-delay: 17s;
+  opacity: 0;
+
+}
+.scroll-animate-text2 {
+  animation-delay: 19s;
+  opacity: 0;
+
+}
+
+
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .edge-blur {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .edge-blur::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+    z-index: 1;
+    backdrop-filter: blur(1px);
+  }
+}
+
+
+.scroll-animate-cardComplete {
+  visibility: visible;
+  opacity: 1;
+  /* animation: scrollAnimate2 1s forwards; */
+  animation: carouselComplete 5s ease-in-out;
+}
+
+@keyframes carouselComplete{
+  0%{
+    transform: translateX(250%) scale(0.9);
+    opacity: 0%;
+   
+     
+  }
+  25%{
+    transform: translateX(0%) scale(1);
+    opacity: 100%;
+  
+  }
+  75%{
+    transform:translateX(0%) scale(1);
+    opacity: 100%;
+  }
+  100%
+  {
+    transform: translateX(-250%) scale(.9);
+     opacity: 0%;
   }
 }
