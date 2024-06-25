@@ -53,22 +53,31 @@ const Projects: React.FC = () => {
         </button>
       </div>
       <div className={`flex relative overflow-hidden flex-col items-center `}>
+      <div className='translate-y-[5rem] tracking-wider text-4xl font-semibold'>
+          Ui/Ux Designs
+        </div>
         {scenes.map((scene, index) => (
             <div className='  '>
+
                       <div key={index} className={`   w-[50rem] rounded-md z-10 h-[55rem] ${index === currentIndex ? '' : 'hidden'}`}>
-              {index === currentIndex && (
-              <h1 className='text-center text-white mt-4 text-2xl translate-y-24'>
-                {titles[index]}
-              </h1>
-            )}
+         
             <Spline scene={scene} className={animationClass} />
           
             
-            
             {index === currentIndex && (
-              <p className='text-center text-gray-500 mb-4  absolute -translate-y-32 scroll-animate-desc'>
+              <h1 className='text-center text-white text-2xl -translate-y-[11rem]'>
+                {titles[index]}
+              </h1>
+            )}
+            {index === currentIndex && (
+             
+                    <p className='text-center text-gray-500 mb-4  absolute -translate-y-32 scroll-animate-desc'>
                 {desc[index]}
               </p>
+                
+             
+              
+            
             )}
           </div>
             </div>

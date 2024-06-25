@@ -48,7 +48,7 @@ const collaterals: React.FC =  () => {
   }, [])
 
   return (
-    <div className='h-screen flex flex-col justify-center  relative '>
+    <div className='h-screen flex flex-col justify-center  relative overflow-hidden'>
        <div className=' flex justify-center gap-10 w-full absolute z-10 text-center  font-semibold text-3xl my-10'>
       
         {/* <div className='my-auto '>
@@ -59,7 +59,11 @@ const collaterals: React.FC =  () => {
         {images.map((image, index) => (
           <div key={index} className={`relative flex flex-col my-10 mt-16  ${index === currentIndex ? '' : 'hidden'} transition-opacity duration-500 ease-in-out`}>
              
-         
+          <div className='mb-16'>
+            <h1 className='font-semibold tracking-wider text-4xl'>
+              Social Media Collaterals
+            </h1>
+          </div>
               <div className={`text-center flex justify-center h-[20rem] ${animationClass}` }>
               <Image src={image.src} width={250} height={250} alt='images' />
               </div>
@@ -115,6 +119,27 @@ const collaterals: React.FC =  () => {
         <Image src={'/images/11.png'} width={150} height={150} alt='images'/>
         <Image src={'/images/12.png'} width={150} height={150} alt='images'/>
         <Image src={'/images/13.png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/9.png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/4(1).png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/1(2).png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/2(1).png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/11.png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/12.png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/13.png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/7.png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/8.png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/5(1).png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/10.png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/7.png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/8.png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/1.png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/2.png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/3.png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/4.png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/12.png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/13.png'} width={150} height={150} alt='images'/>
+        <Image src={'/images/9.png'} width={150} height={150} alt='images'/>
+        
       
       
        

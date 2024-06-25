@@ -12,14 +12,14 @@ import Projects from './components/main_components/projects'
 import Collaterals from './components/main_components/collaterals'
 import Movie from './components/main_components/movie'
  
+ 
 
 const page = () => {
   return (
     <div className='px-24 text-white  mx-10'>
          
        
-       
-       
+     
        
         <Nav/>
         <div className='z-10'>
