@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import LogoAnimation from '/public/lottie/card.json';
+import LogoAnimation from '/public/images/card.json';
 import Lottie from 'react-lottie';
 
 const Nav = () => {
