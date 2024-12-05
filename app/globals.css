@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+.body {
+  background-color: #161024; /* Example: dark background color */
+  color: #fff; /* Optional: adjust text color for contrast */
+}
+
+
+ /* Default svg color */
+.svg-color {
+  filter: invert(100%) brightness(1000%);
+   
+}
+
+/* styles/globals.css */
+.svg-hover {
+  filter: invert(33%) sepia(100%) saturate(10000%) hue-rotate(90deg) brightness(1000%) contrast(100%);
+  transform: scale(1.2);
+  
+}
+
+
 .bg-gradient-radial2{
   position: relative;
   color: rgb(var(--foreground-rgb));
@@ -315,6 +335,7 @@
   visibility: visible;
   opacity: 1;
   animation: scrollAnimate 5s forwards;
+  
 }
 
 .scroll-animate-desc {
@@ -331,12 +352,14 @@
 .scroll-animate-cardPrev {
   visibility: visible;
   opacity: 1;
+  
   /* animation: scrollAnimate2 1s forwards; */
   animation: carouselPrev 2s forwards;
 }
 
 .scroll-animate-text2 {
   visibility: visible;
+  position: absolute;
   opacity: 1;
   animation: scrollAnimate2 5s forwards;
 }
@@ -435,4 +458,63 @@
     transform: translateX(-250%) scale(.9);
      opacity: 0%;
   }
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-text {
+  animation: scroll-text 25s linear infinite;
+}
+
+@keyframes scroll-text2 {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+.animate-scroll-text2 {
+  animation: scroll-text2 35s linear infinite;
+  
+}
+
+
+
+@keyframes fadeInFromBottom {
+  0% {
+    transform: translateY(20px); /* Start 20px below the current position */
+    opacity: 0;
+    visibility: hidden;
+  }
+ 
+  100% {
+    transform: translateY(0); /* Move to the current position */
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.fade-in-from-bottom {
+  opacity: 0; /* Start with opacity 0 */
+  visibility: hidden; /* Ensure the element is hidden before the animation starts */
+  animation: fadeInFromBottom 2s ease-out forwards;
+  animation-delay: .5s; /* Add a delay before the animation starts */
+}
+ 
+
+.custom-outline {
+  text-shadow: 
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
 }

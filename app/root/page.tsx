@@ -11,6 +11,8 @@ import Object from './components/main_components/object'
 import Projects from './components/main_components/projects'
 import Collaterals from './components/main_components/collaterals'
 import Movie from './components/main_components/movie'
+import Socialproofs from './components/main_components/socialproofs'
+import Game from './components/game'
  
  
 
@@ -22,15 +24,16 @@ const page = () => {
      
        
         <Nav/>
-        <div className='z-10'>
-        <Herobuttons/>
-        </div>
+       
         
       
-      {/* <Object/> */}
+
+{/*        
+      <Hero/> */}
+      <Game/>
+     <Socialproofs/>
+     
        
-      <Hero/>
-       <Intro/>
        <Projects/>
        <Collaterals/>
      <Movie/>

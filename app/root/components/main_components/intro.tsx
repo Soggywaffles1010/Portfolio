@@ -34,29 +34,29 @@ const Intro: React.FC = () => {
   };
 
   return (
-    <div className=' flex justify-center '>
-      <div className="">
+    <div className=' flex justify-center  items-center '>
+      <div className=" items-center">
        
-        <div className="text-center ">
-        <p className='mt-32 animate-on-scroll text-center scroll-animate-text-1  '>
+        <div className="text-center text-2xl text-black    items-center ">
+        <p className='mt-32 animate-on-scroll text-center scroll-animate-text-1  bg-white  px-4 py-4 rounded-lg shadow-md inline-block '>
           Our journey begins here.
         </p>
-          <p className='  animate-on-scroll scroll-animate-text-2  '>
+          <p className='  animate-on-scroll scroll-animate-text-2  bg-white  px-4 py-2 rounded-lg shadow-md inline-block'>
             I love Art
           </p>
-          <p className=' animate-on-scroll  scroll-animate-text-3  '>
+          <p className=' animate-on-scroll  scroll-animate-text-3  bg-white  px-4 py-2 rounded-lg shadow-md inline-block'>
             And I've spent my entire career integrating art with digital.
           </p>
-          <p className='animate-on-scroll  scroll-animate-text-4  '>
+          <p className='animate-on-scroll  scroll-animate-text-4  bg-white  px-4 py-2 rounded-lg shadow-md inline-block'>
             line by line
           </p>
-          <p className='animate-on-scroll  scroll-animate-text-5  '>
+          <p className='animate-on-scroll  scroll-animate-text-5 bg-white  px-4 py-2 rounded-lg shadow-md inline-block'>
             deliverable by deliverable
           </p>
-          <p className='animate-on-scroll  scroll-animate-text-6  '>
+          <p className='animate-on-scroll  scroll-animate-text-6 bg-white  px-4 py-2 rounded-lg shadow-md inline-block'>
             and Project by project
           </p> 
-          <p className='animate-on-scroll  scroll-animate-text-7  '>
+          <p className='animate-on-scroll  scroll-animate-text-7  bg-white  px-4 py-2 rounded-lg shadow-md inline-block'>
             and Project by project
           </p>
           {/* <div className=" bg-red-500 flex relative ">
@@ -73,13 +73,11 @@ const Intro: React.FC = () => {
      
      <button
         onClick={triggerAnimations}
-        className='mt-32 px-4 py-2 rounded mb-16 blinking-text   border-blue-500 border-opacity-0 hover:border-opacity-100 hover:border hover:border-blue-500 '
+        className='mt-16 px-4 py-2 rounded mb-16 blinking-text   border-blue-500 border-opacity-0 hover:border-opacity-100 hover:border hover:border-blue-500 '
       >
         Play it back
       </button>
-      {/* <div className="max-w-2xl text-center">
-          Take a look at some of my work and you will see how I have helped clients improve their businesses and careers by laying the groundwork for the future of digital.
-        </div> */}
+    
      </div>
       </div>
 
