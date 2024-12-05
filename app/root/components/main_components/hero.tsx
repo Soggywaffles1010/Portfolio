@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import Lottie from 'react-lottie';
-import LogoAnimation from '/public/lottie/card.json'; // Corrected path
+ 
 import Image from 'next/image';
 
 const Hero = () => {
@@ -16,7 +16,7 @@ const Hero = () => {
   const lottieOptions = {
     loop: false,
     autoplay: false,
-    animationData: LogoAnimation,
+    animationData: Animation,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice',
     },
