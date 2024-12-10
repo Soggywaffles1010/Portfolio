@@ -518,3 +518,29 @@
     -1px 1px 0 black,
     1px 1px 0 black;
 }
+.text-shadow-custom {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Prevents highlight on mobile devices */
+  text-shadow: 0px 1px 0px #000; /* Basic text shadow */
+  filter: drop-shadow(0px 1px 1px #000); /* Correct drop-shadow syntax */
+  background-color: #f3a649; /* Background color for the button */
+  box-shadow: inset 0 1px 0 #FFE5C4, 0 6px 0 #915100; /* Inner and outer shadows */
+  border-radius: 0.3rem; /* Unified border-radius */
+  padding: 0.3rem 1rem; /* Standard padding */
+  display: inline-block; /* Ensures it's treated as an inline element */
+  margin-left: 2rem;
+
+}
+
+.text-hover{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Prevents highlight on mobile devices */
+  text-shadow: 0px 1px 0px #000; /* Basic text shadow */
+  filter: drop-shadow(0px 1px 1px #000); /* Correct drop-shadow syntax */
+  background-color: #f48b0b; /* Background color for the button */
+  box-shadow: inset 0 1px 0 #FFE5C4, 0 3.5px 0 #915100; /* Inner and outer shadows */
+  border-radius: 0.3rem; /* Unified border-radius */
+  padding: 0.3rem 1rem; /* Standard padding */
+  display: inline-block; /* Ensures it's treated as an inline element */
+  transform: translateY(6px);
+  margin-left: 2rem;
+ 
+}

@@ -1,10 +1,11 @@
+'use client';
 import React from 'react';
 import NextVideo from 'next-video';
 import Link from 'next/link';
 import { Asset } from 'next-video/dist/assets.js';
 
 interface VideosProps {
-  video: Asset;
+  video: string | Asset; // Allow both string and Asset types
   title: string;
   description: string;
   link: string;
