@@ -23,17 +23,17 @@ const page = () => {
        
      
        
-        <Nav/>
+        {/* <Nav/> */}
        
         
       
 
        
       {/* <Hero/> */}
-      <Game/>
+      {/* <Game/>
      <Socialproofs/>
        <Projects/>
-       <Collaterals/>
+       <Collaterals/> */}
      <Movie/>
         
         
