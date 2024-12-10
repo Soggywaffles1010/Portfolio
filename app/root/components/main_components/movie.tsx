@@ -22,10 +22,10 @@ const Movie = () => {
     { video: '/video/sample.mp4', title: 'Gaza', description: 'Description for Gaza video', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
   ];
   const videoData2 = [
-    { video: '/video/2024-05-05 063835.mp4', title: 'Mt. Apo Crater2', description: 'Crater of the tallest volcano in the Philippines2', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
-    { video: '/video/final hospital gaza bombing.mp4', title: 'Final Hospital Gaza Bombing2', description: 'Description for Final Hospital Gaza Bombing video', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
-    { video: '/video/sample.mp4', title: '2024-05-05 063835', description: 'Description for 2024-05-05 063835 video2', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
-    { video: '/video/sample.mp4', title: 'Gaza', description: 'Description for Gaza video', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
+    { video: '/video/shake shake.mp4', title: 'Mt. Apo Crater2', description: 'Crater of the tallest volcano in the Philippines2', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
+    { video: '/video/traveling (1080 x 1920 px).mp4', title: 'Final Hospital Gaza Bombing2', description: 'Description for Final Hospital Gaza Bombing video', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
+    { video: '/video/version 2-Disney video ads 1.mp4', title: '2024-05-05 063835', description: 'Description for 2024-05-05 063835 video2', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
+    { video: '/video/video ads 3 family canvas final.mp4', title: 'Gaza', description: 'Description for Gaza video', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
   ];
 
   const videoData3 = [
