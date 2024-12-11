@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .body {
-  background-color: #161024; /* Example: dark background color */
+  background-color: #f7e8ad; /* Example: dark background color */
   color: #fff; /* Optional: adjust text color for contrast */
 }
 

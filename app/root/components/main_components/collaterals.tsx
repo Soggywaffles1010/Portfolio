@@ -120,7 +120,7 @@ const collaterals: React.FC =  () => {
       </div>
       
     
-      <div className='flex justify-center flex-wrap max-w-screen relative opacity-30 overflow-hidden'>
+      <div className='flex justify-center flex-wrap max-w-screen relative opacity-80 overflow-hidden'>
    
         <div className='absolute w-full h-full bg-gradient-to-l from-black via-black to-transparent  translate-x-[700px]'></div>
         <div className='absolute w-full h-full bg-gradient-to-r from-black via-black to-transparent  -translate-x-[1000px]'></div>

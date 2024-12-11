@@ -176,7 +176,7 @@ const Movie = () => {
         {!hoveredVideo && (
           <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
             <p className="absolute mt-16 text-white">Hover over a video for preview</p>
-            <div className="opacity-20">
+            <div className="opacity-70">
             <Image
   src="https://res.cloudinary.com/dylfnlwdm/image/upload/v1733901508/thumbnail5-01_vdtd7s.png"
   width={1920}

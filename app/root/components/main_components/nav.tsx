@@ -3,26 +3,18 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import LogoAnimation from '/public/images/card.json';
-import Lottie from 'react-lottie';
+
 
 const Nav = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false); 
   
-  const [animationCompleted, setAnimationCompleted] = useState(false);
+   
   const [isPlaying, setIsPlaying] = useState(false);
-  const [animationSpeed, setAnimationSpeed] = useState(1.5);
+   
  
 
-  // Lottie options
-  const lottieOptions = {
-    loop: false, // Don't loop the animation
-    autoplay: false, // Start the animation when triggered
-    animationData: LogoAnimation, // Path to the Lottie JSON animation
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice', // Ensures that the animation scales correctly
-    },
-  };
+   
 
   // Handle mouse enter and leave to start and stop the animation
   const handleMouseEnter = () => {
@@ -35,30 +27,10 @@ const Nav = () => {
     setIsHovered(false); // Update the hover state
   };
 
-  // Handle when the animation is complete
-  const handleAnimationComplete = () => {
-    setAnimationCompleted(true); // Mark the animation as complete
-  };
+  
 
-  // Start the animation
-  const playAnimation = () => {
-    setIsPlaying(true); // Update state to reflect the animation is playing
-    setAnimationCompleted(false); // Reset completed state
-  };
-
-  // Stop the animation
-  const stopAnimation = () => {
-    setIsPlaying(false); // Update state to reflect the animation is stopped
-  };
-
-  // Button click handler to toggle play/stop
-  const toggleAnimation = () => {
-    if (isPlaying) {
-      stopAnimation();
-    } else {
-      playAnimation();
-    }
-  };
+  
+ 
 
   return (
     <div className="flex justify-between w-full py-5">
@@ -69,22 +41,7 @@ const Nav = () => {
           className='  rounded-lg flex items-center'
           style={{ backgroundColor: 'transparent' }}
         >
-          <Lottie
-          
-            options={lottieOptions}
-            speed={animationSpeed}
-            height={50}
-            width={90}
-            isStopped={!isPlaying} // Control animation playback (stop when false, play when true)
-            isPaused={false} // Ensures animation doesn't pause
-            eventListeners={[
-              {
-                eventName: 'complete',
-                callback: handleAnimationComplete, // Listen to animation complete event
-              },
-            ]}
-            style={{ pointerEvents: 'none'}} // Prevents click events from affecting the animation
-          />
+           
         </div>
       </div>
 
