@@ -16,7 +16,7 @@ const Movie = () => {
   const [activeSet, setActiveSet] = useState<number>(1);
 
   const videoData = [
-    { video: '/video/2024-05-05 063835.mp4', title: 'Mt. Apo Crater', description: 'Crater of the tallest volcano in the Philippines', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
+    { video: 'https://www.youtube.com/embed/WdCYSpKKiWs', title: 'Mt. Apo Crater', description: 'Crater of the tallest volcano in the Philippines', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
     { video: '/video/final hospital gaza bombing.mp4', title: 'Final Hospital Gaza Bombing', description: 'Description for Final Hospital Gaza Bombing video', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
     { video: '/video/sample.mp4', title: '2024-05-05 063835', description: 'Description for 2024-05-05 063835 video', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
     { video: '/video/sample.mp4', title: 'Gaza', description: 'Description for Gaza video', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
@@ -28,18 +28,20 @@ const Movie = () => {
     { video: '/video/video ads 3 family canvas final.mp4', title: 'Gaza', description: 'Description for Gaza video', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
   ];
 
+
+
   const videoData3 = [
-    { video: '/video/2024-05-05 063835.mp4', title: 'Mt. Apo Crater3', description: 'Crater of the tallest volcano in the Philippines3', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
-    { video: '/video/final hospital gaza bombing.mp4', title: 'Final Hospital Gaza Bombing3', description: 'Description for Final Hospital Gaza Bombing video', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
-    { video: '/video/sample.mp4', title: '2024-05-05 063835', description: 'Description for 2024-05-05 063835 video3', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
-    { video: '/video/sample.mp4', title: 'Gaza', description: 'Description for Gaza video', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
+    { video: '/video/Compressed_Pilot presentation_3.mp4', title: 'Mt. Apo Crater4', description: 'Crater of the tallest volcano in the Philippines4', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
+    { video: '/video/WN-P2-A1.1-V- Lesson 03 Video 01-revised1.mp4', title: 'Final Hospital Gaza Bombing4', description: 'Description for Final Hospital Gaza Bombing video', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
+    { video: '/video/WN-P2-A3.2V-Lesson 01 Video 01-revised3.mp4', title: '2024-05-05 063835', description: 'Description for 2024-05-05 063835 video4', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
+    { video: '/video/WN-P2-C1.1-V-Lesson 01 Video 03.mp4', title: 'Gaza', description: 'Description for Gaza video', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
   ];
 
   const videoData4 = [
-    { video: '/video/2024-05-05 063835.mp4', title: 'Mt. Apo Crater4', description: 'Crater of the tallest volcano in the Philippines4', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
-    { video: '/video/final hospital gaza bombing.mp4', title: 'Final Hospital Gaza Bombing4', description: 'Description for Final Hospital Gaza Bombing video', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
-    { video: '/video/sample.mp4', title: '2024-05-05 063835', description: 'Description for 2024-05-05 063835 video4', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
-    { video: '/video/sample.mp4', title: 'Gaza', description: 'Description for Gaza video', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
+    { video: '/video/asdasd.mp4', title: 'Mt. Apo Crater3', description: 'Crater of the tallest volcano in the Philippines3', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
+    { video: '/video/final shorts hk wrap.mp4', title: 'Final Hospital Gaza Bombing3', description: 'Description for Final Hospital Gaza Bombing video', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
+    { video: '/video/The Temple of.mp4', title: '2024-05-05 063835', description: 'Description for 2024-05-05 063835 video3', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
+    { video: '/video/A year ago.mp4', title: 'Gaza', description: 'Description for Gaza video', link: 'https://www.youtube.com/embed/XDqEvmxnLeY' },
   ];
 
   const handleSetClick = (setNumber: number) => {
@@ -59,6 +61,10 @@ const Movie = () => {
       default:
         return videoData;
     }
+  };
+
+  const isYouTube = (url: string) => {
+    return url.includes('youtube.com') || url.includes('youtu.be');
   };
 
   
@@ -97,6 +103,18 @@ const Movie = () => {
         )}
         {hoveredVideo && (
           <div className="absolute w-full h-full">
+          {isYouTube(hoveredVideo) ? (
+            <iframe
+              width="100%"
+              height="100%"
+              src={hoveredVideo}
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="Video Preview"
+              className="w-full h-full object-cover"
+            />
+          ) : (
             <video
               src={hoveredVideo}
               controls
@@ -104,7 +122,8 @@ const Movie = () => {
               muted
               className="w-full h-full object-cover"
             />
-          </div>
+          )}
+        </div>
         )}
       </div>
 
