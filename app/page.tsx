@@ -4,7 +4,9 @@ import Cooking from "./root/page";
 export default function Home() {
   return (
     <main  >
-          <Cooking/>
+        <div>
+          dsfsd
+        </div>
     </main>
   );
 }
