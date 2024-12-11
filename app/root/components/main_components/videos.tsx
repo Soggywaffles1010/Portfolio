@@ -1,11 +1,11 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import NextVideo from 'next-video';
 import Link from 'next/link';
 import { Asset } from 'next-video/dist/assets.js';
 
 interface VideosProps {
-  video: string  ; // Allow both string and Asset types
+  video: string;  // Allow both string and Asset types
   title: string;
   description: string;
   link: string;
@@ -13,15 +13,37 @@ interface VideosProps {
   onMouseLeave: () => void;
 }
 
-const Videos: React.FC<VideosProps> = ({ video, title, description, link, onMouseEnter, onMouseLeave }) => {
+const Videos: React.FC<VideosProps> = ({
+  video,
+  title,
+  description,
+  link,
+  onMouseEnter,
+  onMouseLeave,
+}) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   const isYouTube = (url: string) => {
     return url.includes('youtube.com') || url.includes('youtu.be');
   };
+
+  // Handle mouse enter and leave to toggle shadow
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    onMouseEnter();
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    onMouseLeave();
+  };
+
   return (
     <div
-      className="w-full border p-5 rounded-lg border-opacity-50 hover:border-orange-950 border-orange-950 drop-shadow-2xl cursor-pointer bg-orange-200"
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+      className={`w-full p-5  rounded-lg    cursor-pointer  
+        ${isHovered ? 'card-hover' : 'card-regular'}`}  // Toggle between regular and hover styles based on state
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {isYouTube(video) ? (
         // YouTube video embed
@@ -33,16 +55,17 @@ const Videos: React.FC<VideosProps> = ({ video, title, description, link, onMous
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           title={title}
-          className=' bg-white rounded-md'
+          className="bg-white rounded-md"
         />
       ) : (
         // Local video file using Next.js Video component
         <NextVideo src={video} className="w-full h-auto" controls />
       )}
+
       <div className="mt-2 flex flex-col gap-2 ">
         <h3 className="text-lg font-semibold text-orange-950 ">{title}</h3>
-        <p className="text-sm  truncate text-orange-950">{description}</p>
-        <div className="text-sm text-blue-500">
+        <p className="text-sm truncate text-orange-950">{description}</p>
+        <div className="text-sm text-blue-500 mt-2 hover:text-white">
           <Link href={link}>Watch more</Link>
         </div>
       </div>

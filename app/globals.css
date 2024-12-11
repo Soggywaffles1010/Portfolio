@@ -544,3 +544,30 @@
   margin-left: 2rem;
  
 }
+
+.card-regular{
+  box-shadow: 0px 10px 0px rgba(49, 21, 2, 1), inset 2px 5px 1px rgba(242, 240, 231, 1);
+  border-color: rgba(49, 21, 2, 1);
+  
+  background-color: rgb(248, 220, 202);
+  border-top-width: 0px; /* Top border width */
+  border-left-width: 2px; /* Left border width */
+  border-right-width: 3.5px; /* Right border width */
+  border-bottom-width: 2px; /* Bottom border width */
+  
+  
+  
+}
+.card-hover:hover {
+  box-shadow: 0px 5px 0px rgba(49, 21, 2, 1), inset 3px 3px 1px rgba(66, 53, 43, 0.3); /* Shadow on hover */
+  transform: translateY(6px);
+  border-color: rgba(49, 21, 2, 1);
+  border-top-width: 3.5px; /* Top border width */
+  border-left-width: 2.5px; /* Left border width */
+  border-right-width: 3.5px; /* Right border width */
+  border-bottom-width: 2.5px; /* Bottom border width */
+  background-color: rgb(249, 192, 154);
+  
+  
+   
+}

@@ -187,7 +187,7 @@ const Movie = () => {
           </div>
         )}
         {hoveredVideo && (
-          <div className="absolute w-full h-full">
+          <div className="absolute w-full h-full transition-opacity duration-500 ease-in-out opacity-100" style={{ opacity: 1 }}>
           {isYouTube(hoveredVideo) ? (
             <iframe
               width="100%"
@@ -197,7 +197,7 @@ const Movie = () => {
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               title="Video Preview"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-lg  "
             />
           ) : (
             <video
@@ -254,7 +254,7 @@ const Movie = () => {
             </Button>
           </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 p-4 bg-orange-400 shadow-md rounded-md">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 p-4 bg-orange-400   rounded-md">
         {getVideoData().map((data, index) => (
             <Videos
               key={index}
