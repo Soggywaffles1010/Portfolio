@@ -19,7 +19,7 @@ const Videos: React.FC<VideosProps> = ({ video, title, description, link, onMous
   };
   return (
     <div
-      className="w-full border px-5 rounded-lg border-opacity-50 hover:border-blue-400 border-gray-900 cursor-pointer"
+      className="w-full border p-5 rounded-lg border-opacity-50 hover:border-orange-950 border-orange-950 drop-shadow-2xl cursor-pointer bg-orange-200"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
@@ -27,20 +27,21 @@ const Videos: React.FC<VideosProps> = ({ video, title, description, link, onMous
         // YouTube video embed
         <iframe
           width="100%"
-          height="100%"
+          height="auto"
           src={video}
           frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           title={title}
+          className=' bg-white rounded-md'
         />
       ) : (
         // Local video file using Next.js Video component
         <NextVideo src={video} className="w-full h-auto" controls />
       )}
-      <div className="mt-2">
-        <h3 className="text-lg font-semibold">{title}</h3>
-        <p className="text-sm text-gray-600">{description}</p>
+      <div className="mt-2 flex flex-col gap-2 ">
+        <h3 className="text-lg font-semibold text-orange-950 ">{title}</h3>
+        <p className="text-sm  truncate text-orange-950">{description}</p>
         <div className="text-sm text-blue-500">
           <Link href={link}>Watch more</Link>
         </div>
