@@ -31,9 +31,9 @@ const page = () => {
        
       {/* <Hero/> */}
       {/* <Game/> */}
-     <Socialproofs/>
-       {/* <Projects/>
-       <Collaterals/> */}
+     {/* <Socialproofs/> */}
+       {/* <Projects/> */}
+       <Collaterals/>
      {/* <Movie/> */}
         
         

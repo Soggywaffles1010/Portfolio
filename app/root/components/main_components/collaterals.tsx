@@ -5,26 +5,45 @@ import { GrFormPrevious } from 'react-icons/gr';
 import { MdNavigateNext } from 'react-icons/md';
 
 const collaterals: React.FC =  () => {
+
+  const toolLinks = [
+    'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733908707/figma-2021-05-05_sd5km7.png',
+    'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733908704/canva-logo-circle-freelogovectors.net_-400x400_gs7xtd.png',
+    'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733908700/Adobe_Photoshop_CC_icon.svg_otvunw.png',
+    'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733908698/Adobe_Illustrator_CC_icon.svg_gs9diq.png',
+  ];
+  
+  // Function to randomize and select two tools
+  const randomizeTools = () => {
+    const shuffled = [...toolLinks].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, 2); // Select the first two items from shuffled
+  };
   const images = [
-    { src: '/images/1.png', title: 'Calendar' },
-    { src: '/images/2.png', title: 'Social Media Posts' },
-    { src: '/images/3.png', title: 'Facebook Ads' },
-    { src: '/images/4.png', title: 'Instagram Ads' },
-    { src: '/images/5.png', title: 'Event Poster' },
-    { src: '/images/1(1).png', title: 'Individual Fitness Poster' },
-    { src: '/images/6.png', title: 'FB Meme' },
-    { src: '/images/6(1).png', title: 'Individual Sports Poster' },
-    { src: '/images/10.png', title: 'School Paper' },
-    { src: '/images/7.png', title: 'Individual Sports Poster' },
-    { src: '/images/8.png', title: 'Team Sports Poster' },
-    { src: '/images/5(1).png', title: 'Tabloid' },
-    { src: '/images/9.png', title: 'Individual Sports Poster' },
-    { src: '/images/4(1).png', title: 'Individual Sports Poster' },
-    { src: '/images/1(2).png', title: 'Headline News paper' },
-    { src: '/images/2(1).png', title: 'Title 16' },
-    { src: '/images/11.png', title: 'Title 17' },
-    { src: '/images/12.png', title: 'Title 18' },
-    { src: '/images/13.png', title: 'Title 19' }
+    { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733901503/3_glwbhx.png', title: 'Instagram Ads', tools: randomizeTools() },
+  
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733901500/1_2_n4yxln.png', title: 'School Paper Front page', tools: randomizeTools() },
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733901501/3_1_b1z2mu.png', title: 'School Paper News article', tools: randomizeTools() },
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733901505/5_shdeui.png', title: 'Event Promotion Flyer', tools: randomizeTools() },
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733901505/9_hnrflm.png', title: 'Magazine Center Fold' , tools: randomizeTools()},
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733901504/1_wmhi3x.png', title: 'Calendar', tools: randomizeTools() },
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733901505/8_nmbraz.png', title: 'Individual Sports Poster', tools: randomizeTools() },
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733901509/ukraine-russia_thumbnail-01_uw2xiv.png', title: 'Youtube Thumbnail' , tools: randomizeTools()},
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733901503/4_ikt0bm.png', title: 'Facebook Ad', tools: randomizeTools() },
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733903936/4_qzanxb.png', title: 'Brochure' , tools: randomizeTools()},
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733903936/5_tmop6w.png', title: 'Flyer' , tools: randomizeTools()},
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733903935/1_wimlxe.png', title: 'Another Brochure', tools: randomizeTools() },
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733904096/halloween_sale_Banner_version_3-0_pwacrc.png', title: 'Halloween Sale Banner' , tools: randomizeTools()},
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733904072/CUSTOMIZED_CARTOON_CANVAS_lehrnq.png', title: 'Landing Page Hero Banner' , tools: randomizeTools()},
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733904280/VERSION3_g0o7sd.png', title: 'Tiktok Banner ad', tools: randomizeTools() },
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733904295/halloween_sale_1920_x_1080_px_kqtywl.png', title: 'FB Reels Banner ad', tools: randomizeTools() },
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733904409/1_i0e10n.png', title: 'Product Promotional 1', tools: randomizeTools() },
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733904410/2_zltqo7.png', title: 'Product Promotional 2', tools: randomizeTools() },
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733904412/3_vx05vm.png', title: 'Product Promotional 3', tools: randomizeTools() },
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733904895/11_zfnhji.png', title: 'Lifestyle images', tools: randomizeTools() },
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733904876/3_g2xhhe.png', title: 'Lifestyle images 2' , tools: randomizeTools()},
+  { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733904893/13_x5o8go.png', title: 'Lifestyle images 3' , tools: randomizeTools()},
+
+     
   ];
   const [currentIndex, setCurrentIndex] = useState(0)
   const [animationClass, setAnimationClass] = useState('scroll-animate-cardComplete');
@@ -51,40 +70,51 @@ const collaterals: React.FC =  () => {
     <div className='h-screen flex flex-col justify-center  relative overflow-hidden'>
        <div className=' flex justify-center gap-10 w-full absolute z-10 text-center  font-semibold text-3xl my-10'>
       
-        {/* <div className='my-auto '>
+        <div className='my-auto '>
         <button onClick={handlePrevious} className='px-4 py-4 hover:border-0 bg-blue-500 text-white rounded-full border bg-opacity-0 border-opacity-50 border-white hover:bg-blue-300 hover:text-black'>
           <GrFormPrevious />
         </button>
-        </div> */}
-        {images.map((image, index) => (
-          <div key={index} className={`relative flex flex-col my-10 mt-16  ${index === currentIndex ? '' : 'hidden'} transition-opacity duration-500 ease-in-out`}>
-             
-          <div className='mb-16'>
-            <h1 className='font-semibold tracking-wider text-4xl'>
-              Social Media Collaterals
-            </h1>
-          </div>
-              <div className={`text-center flex justify-center h-[20rem] ${animationClass}` }>
-              <Image src={image.src} width={250} height={250} alt='images' />
-              </div>
+        </div>
+          {images.map((image, index) => (
+  <div
+    key={index}
+    className={`  gap-10 h-screen relative flex flex-col w-screen   ${index === currentIndex ? '' : 'hidden'} transition-opacity duration-500 ease-in-out`}
+  >
+    <div className="  h-[20vh] items-center text-center mt-32">
+      <h1 className="font-semibold tracking-wider text-4xl">{image.title}</h1>
+    </div>
 
-              {/* <div className='absolute w-full mt-64 pt-32 '>
-                
-              <p className='tracking-wider  '>
-                {image.title}
-              </p>
-              </div> */}
-
-             
-             
-          </div>
-        ))}
-        {/* <div className='my-auto'>
+    <div
+      className={`flex justify-center ${animationClass} rounded-md h-[60vh]`}
+      style={{ maxWidth: '100%', display: 'flex', justifyContent: 'center' }}
+    >
+      <Image
+        src={image.src}
+        alt="images"
+        width={500} // Adjust this as needed to maintain aspect ratio
+        height={500} // Adjust this as needed to maintain aspect ratio
+        className="rounded-md"
+        layout="intrinsic"
+      />
+    </div>
+    <div className={`text-center h-[20vh] flex justify-center gap-8 `}>
+    {(image.tools || []).map((tool, toolIndex) => (
+        <img
+          key={toolIndex}
+          src={tool}
+          alt={`Tool ${toolIndex + 1}`}
+          style={{ width: '40px', height: '40px', margin: '5px' }}
+        />
+      ))}
+    </div>
+  </div>
+))}
+        <div className='my-auto'>
         <button onClick={handleNext} className='px-4 py-4 hover:border-0 bg-blue-500 text-white rounded-full border bg-opacity-0 border-opacity-50 border-white hover:bg-blue-300 hover:text-black'>
           <MdNavigateNext />
         </button>
         </div>
-           */}
+          
       
       
       </div>
@@ -96,49 +126,16 @@ const collaterals: React.FC =  () => {
         <div className='absolute w-full h-full bg-gradient-to-r from-black via-black to-transparent  -translate-x-[1000px]'></div>
 <div className='absolute w-full h-full bg-gradient-to-r from-black via-black to-transparent  -translate-x-[1000px] opacity-70  '>
 
-</div>
-
+</div> 
+{images.map((image, index) => (
+          <Image key={index} src={image.src} width={150} height={150} alt='images' />
+        ))}
+        {images.map((image, index) => (
+          <Image key={index} src={image.src} width={150} height={150} alt='images' />
+        ))}
+        
  
-        <Image src={'/images/1.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/2.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/3.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/4.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/5.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/1(1).png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/6.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/6(1).png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/10.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/10.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/7.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/8.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/5(1).png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/9.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/4(1).png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/1(2).png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/2(1).png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/11.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/12.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/13.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/9.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/4(1).png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/1(2).png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/2(1).png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/11.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/12.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/13.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/7.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/8.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/5(1).png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/10.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/7.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/8.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/1.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/2.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/3.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/4.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/12.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/13.png'} width={150} height={150} alt='images'/>
-        <Image src={'/images/9.png'} width={150} height={150} alt='images'/>
+       
         
       
       
