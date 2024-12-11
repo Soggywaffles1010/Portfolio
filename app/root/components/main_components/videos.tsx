@@ -1,10 +1,11 @@
 'use client';
-
 import React from 'react';
+import NextVideo from 'next-video';
 import Link from 'next/link';
+import { Asset } from 'next-video/dist/assets.js';
 
 interface VideosProps {
-  video: string; // Now, only a string path is expected
+  video: string | Asset; // Allow both string and Asset types
   title: string;
   description: string;
   link: string;
@@ -19,8 +20,7 @@ const Videos: React.FC<VideosProps> = ({ video, title, description, link, onMous
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      {/* Use regular <video> tag */}
-      <video src={video} className="" controls />
+      <NextVideo src={video} className="w-full h-auto" controls  />
       <div className="mt-2">
         <h3 className="text-lg font-semibold">{title}</h3>
         <p className="text-sm text-gray-600">{description}</p>
