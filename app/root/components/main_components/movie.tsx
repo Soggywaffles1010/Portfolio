@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Videos from './videos';
 import Image from 'next/image';
 import Button from 'next/link';
+import Images from '../reusable/image';
 
 const Movie = () => {
   const [hoveredVideo, setHoveredVideo] = useState<string | null>(null);
@@ -176,13 +177,14 @@ const Movie = () => {
           <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
             <p className="absolute mt-16 text-white">Hover over a video for preview</p>
             <div className="opacity-20">
-              <Image
-                src={'/images/thumbnail5-01.png'}
-                width={1920}
-                height={1080}
-                alt="thumbnail"
-                className="object-cover w-full h-full"
-              />
+            <Image
+  src="https://res.cloudinary.com/dylfnlwdm/image/upload/v1733901508/thumbnail5-01_vdtd7s.png"
+  width={1920}
+  height={1080}
+  alt="thumbnail"
+  className="object-cover w-full h-full"
+/>
+
             </div>
           </div>
         )}

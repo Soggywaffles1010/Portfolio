@@ -30,11 +30,11 @@ const page = () => {
 
        
       {/* <Hero/> */}
-      {/* <Game/>
+      {/* <Game/> */}
      <Socialproofs/>
-       <Projects/>
+       {/* <Projects/>
        <Collaterals/> */}
-     <Movie/>
+     {/* <Movie/> */}
         
         
        
