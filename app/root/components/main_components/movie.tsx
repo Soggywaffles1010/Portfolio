@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Videos from './videos';
 import Image from 'next/image';
-import Link from 'next/link';
+import Button from 'next/link';
 
 const Movie = () => {
   const [hoveredVideo, setHoveredVideo] = useState<string | null>(null);
@@ -112,7 +112,7 @@ const Movie = () => {
       <div className="w-full flex flex-col justify-center items-center overflow-hidden" style={{ height: '40vh' }}>
         <div className="flex w-full gap-16  pl-2">
           <div className="text-white">
-            <Link
+            <Button
               href={"#"}
               className={`block relative text-center font-bold text-xl transition-all ${hoverStates.youtube ? 'text-hover' : 'text-shadow-custom'}`}
               onMouseEnter={() => handleMouseEnter('youtube')}
@@ -120,8 +120,8 @@ const Movie = () => {
               onClick={() => handleSetClick(1)}
             >
               Youtube
-            </Link>
-            <Link
+            </Button>
+            <Button
               href={"#"}
               className={`block relative text-center font-bold text-xl transition-all ${hoverStates.productAds ? 'text-hover' : 'text-shadow-custom'}`}
               onMouseEnter={() => handleMouseEnter('productAds')}
@@ -129,8 +129,8 @@ const Movie = () => {
               onClick={() => handleSetClick(2)}
             >
               Product Ads
-            </Link>
-            <Link
+            </Button>
+            <Button
               href={"#"}
               className={`block relative text-center font-bold text-xl transition-all ${hoverStates.educational ? 'text-hover' : 'text-shadow-custom'}`}
               onMouseEnter={() => handleMouseEnter('educational')}
@@ -138,8 +138,8 @@ const Movie = () => {
               onClick={() => handleSetClick(3)}
             >
               Educational
-            </Link>
-            <Link
+            </Button>
+            <Button
               href={"#"}
               className={`block relative text-center font-bold text-xl transition-all ${hoverStates.vlogs ? 'text-hover' : 'text-shadow-custom'}`}
               onMouseEnter={() => handleMouseEnter('vlogs')}
@@ -147,7 +147,7 @@ const Movie = () => {
               onClick={() => handleSetClick(4)}
             >
               Vlogs
-            </Link>
+            </Button>
           </div>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
