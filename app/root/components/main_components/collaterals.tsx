@@ -42,6 +42,22 @@ const collaterals: React.FC =  () => {
   { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733904895/11_zfnhji.png', title: 'Lifestyle images', tools: randomizeTools() },
   { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733904876/3_g2xhhe.png', title: 'Lifestyle images 2' , tools: randomizeTools()},
   { src: 'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733904893/13_x5o8go.png', title: 'Lifestyle images 3' , tools: randomizeTools()},
+  {src:'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733992356/467186569_1017704260370505_7013132198224799489_n_phdxgz.jpg', title: 'Sports Poster' , tools: randomizeTools()},
+
+
+  {src:'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733994320/112-9421826-5928203-BG-rev2_kbhpgw.png', title: 'Bobs Burger Customized Cartoon' , tools: randomizeTools()},
+  {src:'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733994318/180239_wbg_eisgl1.png' ,title: 'South Park Customized cartoon' , tools: randomizeTools()},
+
+  {src:'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733994315/38592_ii8u6r.jpg' , title: 'Pet and Human cartoon Portrait' ,tools: randomizeTools()},
+
+  {src:'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733994149/LINE_TEST_1-01_hxryzu.png' ,title: 'Line art' , tools: randomizeTools()},
+
+  {src:'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733994121/PT32008_-_Pettoonies_Original_Pet_Art_-_1_OneColor_Canvas8x10in-01_opasa3.png' ,title: 'Pet Disney Cartoon' , tools: randomizeTools()},
+  {src:'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733993011/mouthbeat3.2-01_pa6dt1.jpg' , title: "KDP Children's Book Illustration" ,tools: randomizeTools()},
+  {src:'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733993007/page5-01_edrkgb.jpg' , title: "KDP Children's Book Illustration" ,tools: randomizeTools()},
+  {src:'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733993001/page6-01_msmafz.jpg' , title: "KDP Children's Book Illustration" ,tools: randomizeTools()},
+
+
 
      
   ];
