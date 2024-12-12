@@ -21,7 +21,7 @@ const Socialproofs = () => {
   ];
 
   return (
-    <div>
+    <div className=''>
       <div className='overflow-x-hidden flex flex-col gap-10 h-full w-full'>
         <div className='flex items-center gap-20 animate-scroll-text whitespace-nowrap'>
           {imageUrls.map((url, i) => (

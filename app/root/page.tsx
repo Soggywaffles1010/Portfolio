@@ -18,7 +18,7 @@ import Game from './components/game'
 
 const page = () => {
   return (
-    <div className='px-24 text-white  mx-10'>
+    <div className='px-24 text-white  mx-10 flex flex-col gap-8'>
          
        
      

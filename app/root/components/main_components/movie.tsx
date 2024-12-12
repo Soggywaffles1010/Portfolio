@@ -170,9 +170,9 @@ const Movie = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center overflow-hidden rounded-lg h-screen">
+    <div className="flex flex-col justify-center items-center overflow-hidden rounded-lg h-screen gap-5">
       {/* Container 1 */}
-      <div className="text-4xl tracking-wider font-semibold flex items-center justify-center relative" style={{ height: '60vh', width: '100%' }}>
+      <div className="text-4xl tracking-wider font-semibold flex items-center justify-center relative" style={{ height: '50vh', width: '100%' }}>
         {!hoveredVideo && (
           <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
             <p className="absolute mt-16 text-white">Hover over a video for preview</p>
@@ -215,8 +215,8 @@ const Movie = () => {
       </div>
 
       {/* Container 2 */}
-      <div className="w-full flex flex-col justify-center items-center overflow-hidden" style={{ height: '40vh' }}>
-        <div className="flex w-full gap-16  pl-2">
+      <div className="w-full flex flex-col justify-center items-center overflow-hidden" style={{ height: '50vh' }}>
+        <div className="flex w-full gap-16  pl-2 ">
           <div className="text-white">
             <Button
               href={"#"}
@@ -256,7 +256,7 @@ const Movie = () => {
             </Button>
           </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 p-4 bg-orange-400   rounded-md">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4     rounded-md">
         {getVideoData().map((data, index) => (
             <Videos
               key={index}

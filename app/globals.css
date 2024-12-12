@@ -553,10 +553,7 @@
   border-top-width: 0px; /* Top border width */
   border-left-width: 2px; /* Left border width */
   border-right-width: 3.5px; /* Right border width */
-  border-bottom-width: 2px; /* Bottom border width */
-  
-  
-  
+  border-bottom-width: 2px; /* Bottom border width */ 
 }
 .card-hover:hover {
   box-shadow: 0px 5px 0px rgba(49, 21, 2, 1), inset 3px 3px 1px rgba(66, 53, 43, 0.3); /* Shadow on hover */
@@ -566,8 +563,28 @@
   border-left-width: 2.5px; /* Left border width */
   border-right-width: 3.5px; /* Right border width */
   border-bottom-width: 2.5px; /* Bottom border width */
-  background-color: rgb(249, 192, 154);
-  
-  
-   
+  background-color: rgb(249, 192, 154);  
 }
+
+.card-regular2{
+  box-shadow: 0px 4px 0px rgb(62, 33, 0), inset 2px 5px 1px rgba(242, 240, 231, 1);
+  border-color: rgb(62, 33, 0);
+  color: rgb(255, 166, 0);
+  background-color: #f3db7f;
+  border-top-width: 0px; /* Top border width */
+  border-left-width: 2px; /* Left border width */
+  border-right-width: 3.5px; /* Right border width */
+  border-bottom-width: 2px; /* Bottom border width */ 
+}
+.card-hover2:hover {
+  box-shadow: 0px 3px 0px rgba(49, 21, 2, 1), inset 3px 3px 1px rgba(66, 53, 43, 0.3); /* Shadow on hover */
+  transform: translateY(4px);
+  border-color: rgba(49, 21, 2, 1);
+  border-top-width: 3.5px; /* Top border width */
+  border-left-width: 2.5px; /* Left border width */
+  border-right-width: 3.5px; /* Right border width */
+  border-bottom-width: 2.5px; /* Bottom border width */
+  background-color: #dfcc7f;  
+  color: rgb(247, 222, 177);
+}
+
