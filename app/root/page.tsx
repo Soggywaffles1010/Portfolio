@@ -15,6 +15,7 @@ import Socialproofs from './components/main_components/socialproofs'
 import Game from './components/game'
  
  
+ 
 
 const page = () => {
   return (
@@ -29,7 +30,7 @@ const page = () => {
       
 
        
-      {/* <Hero/> */}
+    
       <Game/>
      <Socialproofs/>
        <Projects/>
