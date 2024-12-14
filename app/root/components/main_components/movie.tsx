@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Videos from './videos';
 import Image from 'next/image';
 import Button from 'next/link';
-import Images from '../reusable/image';
+import Images from '../../../reusable/image';
 
 const Movie = () => {
   const [hoveredVideo, setHoveredVideo] = useState<string | null>(null);

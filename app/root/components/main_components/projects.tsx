@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Spline from '@splinetool/react-spline';
 import { MdNavigateNext } from 'react-icons/md';
 import { GrFormPrevious } from 'react-icons/gr';
-import Textbox from '../reusable/textbox';
+import Textbox from '../../../reusable/textbox';
 
 const Projects: React.FC = () => {
   const scenes = [

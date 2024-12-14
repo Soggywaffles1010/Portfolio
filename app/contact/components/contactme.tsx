@@ -37,7 +37,7 @@ const ContactMe = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-md">
+    <div className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-md ">
       <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>

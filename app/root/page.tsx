@@ -33,9 +33,16 @@ const page = () => {
     
       <Game/>
      <Socialproofs/>
-       <Projects/>
-       <Collaterals/>
-     <Movie/>
+     <div id="projects">
+     <Projects />
+     </div>
+      <div id='collaterals'>
+      <Collaterals/>
+      </div>  
+       <div id='movies'>
+       <Movie/>
+       </div>
+   
         
         
        

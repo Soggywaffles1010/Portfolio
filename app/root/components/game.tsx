@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Spline from '@splinetool/react-spline/next';
-import Textbox from './reusable/textbox';
+import Textbox from '../../reusable/textbox';
 
 const lines = [
   "Hello adventurer.",

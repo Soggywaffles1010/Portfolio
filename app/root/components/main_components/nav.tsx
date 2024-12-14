@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import LogoAnimation from '/public/images/card.json';
+import Buttoncontactme from '@/app/contact/components/buttoncontactme';
 
 
 const Nav = () => {
@@ -33,7 +34,7 @@ const Nav = () => {
  
 
   return (
-    <div className="flex justify-between w-full py-5">
+    <div className="flex justify-between w-full py-5 ">
       <div className="w-1/3 flex items-center">
         <div
           onMouseEnter={handleMouseEnter}
@@ -52,25 +53,25 @@ const Nav = () => {
           onMouseEnter={() => setIsDropdownOpen(true)}
           onMouseLeave={() => setIsDropdownOpen(false)}
         >
-          <span className="hover:text-[#00FF00] mb-32 ml-20 mt-20 text-md hover:text-lg">Work</span>
+           <Buttoncontactme text={'Projects'} href={'/contact'}/>
 
           {/* Dropdown content */}
           {isDropdownOpen && (
-            <div className="absolute top-full w-64 bg-gray-800 text-white shadow-lg rounded text-left">
+            <div className="absolute z-10 top-full w-64 bg-gray-800 text-white shadow-lg rounded text-left">
               <ul className="rounded">
                 <li>
-                  <Link className="block px-4 py-2 hover:bg-gray-700 hover:rounded-t-md hover:text-[#00FF00]" href={'/'}>
-                    Project 1
+                  <Link className="block px-4 py-2 hover:bg-gray-700 hover:rounded-t-md hover:text-[#00FF00]" href={'#projects'}>
+                    UI/UX Designs
                   </Link>
                 </li>
                 <li>
-                  <Link className="block px-4 py-2 hover:bg-gray-700 hover:text-[#00FF00]" href={'/'}>
-                    Project 2
+                  <Link className="block px-4 py-2 hover:bg-gray-700 hover:text-[#00FF00]" href={'#collaterals'}>
+                    Graphic Designs
                   </Link>
                 </li>
                 <li>
-                  <Link className="block px-4 py-2 hover:bg-gray-700 hover:rounded-b-md hover:text-[#00FF00]" href={'/'}>
-                    Project 3
+                  <Link className="block px-4 py-2 hover:bg-gray-700 hover:rounded-b-md hover:text-[#00FF00]" href={'#movies'}>
+                    Videos
                   </Link>
                 </li>
               </ul>
@@ -78,12 +79,12 @@ const Nav = () => {
           )}
         </div>
 
-        <div className="hover:underline text-md hover:text-lg cursor-pointer text-white hover:text-[#00FF00]">About</div>
-        <div className="hover:underline cursor-pointer text-white text-md hover:text-lg hover:text-[#00FF00]">Blog</div>
+        {/* <Buttoncontactme text={'Contact me'} href={'/contact'}/>
+        <Buttoncontactme text={'Contact me'} href={'/contact'}/> */}
       </div>
 
-      <div className="w-1/3 text-right mr-10 text-white flex justify-end">
-        <div className="hover:border-[#00FF00] border text-md hover:text-lg cursor-pointer mr-2 flex hover:mr-1  text-white px-5 rounded-md  items-center   hover:text-[#00FF00]">Contact Me</div>
+      <div className="w-1/3 text-right mr-10 flex justify-end">
+      <Buttoncontactme text={'Contact me'} href={'/contact'}/>
       </div>
     </div>
   );
