@@ -12,7 +12,7 @@ const Nav = () => {
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/">
-            <span className="text-2xl font-bold cursor-pointer">My Logo</span>
+            <span className="text-2xl font-bold cursor-pointer">Allen</span>
           </Link>
         </div>
 

@@ -5,6 +5,7 @@ import { GrFormPrevious } from 'react-icons/gr';
 import { MdNavigateNext } from 'react-icons/md';
 
 const collaterals: React.FC =  () => {
+  
 
   const toolLinks = [
     'https://res.cloudinary.com/dylfnlwdm/image/upload/v1733908707/figma-2021-05-05_sd5km7.png',
@@ -142,16 +143,20 @@ const collaterals: React.FC =  () => {
         <div className='absolute w-full h-full bg-gradient-to-r from-black via-black to-transparent  -translate-x-[1000px]'></div>
 <div className='absolute w-full h-full bg-gradient-to-r from-black via-black to-transparent  -translate-x-[1000px] opacity-70  '>
 
+
+
+
+
 </div> 
+ 
 {images.map((image, index) => (
-          <Image key={index} src={image.src} width={150} height={150} alt='images' />
-        ))}
-        {images.map((image, index) => (
-          <Image key={index} src={image.src} width={150} height={150} alt='images' />
+          <Image key={index} src={image.src} width={150} height={150} alt='images' className='sm:hidden md:hidden hidden lg:block' />
         ))}
         
  
-       
+
+
+ 
         
       
       

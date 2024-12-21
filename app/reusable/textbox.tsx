@@ -45,9 +45,9 @@ const Textbox: React.FC<TextboxProps> = ({ lines, typingSpeed = 50, delay = 5000
   }, [currentLine, isPlaying, lines, typingSpeed]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-full w-full">
-      <div className="relative bg-white border-2 border-black rounded-lg p-4 w-full shadow-md">
-        <p className="text-lg text-gray-800 whitespace-pre-wrap">{displayedText}</p>
+    <div className="flex flex-col items-center h-full sm:w-full w-3/4 justify-center mx-auto">
+      <div className="relative bg-white border-2 border-black rounded-lg p-4 w-full shadow-md mx-auto">
+        <p className="sm:text-lg text-md  text-gray-800 whitespace-pre-wrap">{displayedText}</p>
       </div>
     </div>
   );

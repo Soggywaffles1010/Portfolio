@@ -21,7 +21,7 @@ const Socialproofs = () => {
   ];
 
   return (
-    <div className="w-full py-10">
+    <div className="w-full ">
       <div className="flex flex-col gap-6">
         {/* Scrolling Wrapper */}
         <div className="flex items-center gap-10 md:gap-20 sm:gap-2 overflow-x-auto animate-scroll-text whitespace-nowrap scrollbar-hide">
@@ -32,7 +32,7 @@ const Socialproofs = () => {
               alt={`Asset ${i + 1}`}
               width={120} // Adjust base width for mobile
               height={120} // Adjust base height for mobile
-              className="rounded-lg transition-transform hover:scale-110 hover:shadow-[0_0_3px_3px_rgba(255,255,255,0.2)] md:w-[200px] md:h-[200px] mr-4 md:mr-10 flex-shrink-0"
+              className=""
             />
           ))}
         </div>

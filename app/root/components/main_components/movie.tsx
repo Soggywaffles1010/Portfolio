@@ -170,7 +170,7 @@ const Movie = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center overflow-hidden rounded-lg h-screen gap-5">
+    <div className="flex flex-col justify-center items-center overflow-hidden rounded-lg h-screen gap-5 px-4 sm:px-6 md:px-8">
       {/* Container 1 */}
       <div className="text-4xl tracking-wider font-semibold flex items-center justify-center relative" style={{ height: '50vh', width: '100%' }}>
         {!hoveredVideo && (
@@ -193,7 +193,7 @@ const Movie = () => {
           {isYouTube(hoveredVideo) ? (
             <iframe
               width="100%"
-              height="100%"
+              height="100%" 
               src={hoveredVideo}
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -256,7 +256,7 @@ const Movie = () => {
             </Button>
           </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4     rounded-md">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 w-full">
         {getVideoData().map((data, index) => (
             <Videos
               key={index}
