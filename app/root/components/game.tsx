@@ -15,18 +15,23 @@ const lines = [
 
 const Game: React.FC = () => {
   return (
-    // <div className="relative grid justify-center items-center rounded-md h-full">
+    
     <div className='relative rounded-md h-full'>
 
-      {/* Spline Scene with responsive scaling */}
+      
       <Spline
-        scene="https://prod.spline.design/FcXuavVowV4gyzkt/scene.splinecode"
-       
+        scene="https://prod.spline.design/iMsZXsFXWswLMcNe/scene.splinecode" className='hidden  sm:block'
       />
+          
+           <Spline scene='https://prod.spline.design/UW0Jaiz3aXsaqLsO/scene.splinecode'  className='flex sm:hidden  '/>
+           
 
-      {/* Textbox Component */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-full  max-w-lg px-4 sm:-translate-y-[6rem] translate-y-[3rem] text-center">
-        <Textbox lines={lines} typingSpeed={50} delay={5000} />
+     
+      <div className="sm:absolute relative bottom-8  left-1/2 transform -translate-x-1/2 w-full  max-w-lg px-4 translate-y-[0rem]  sm:-translate-y-[6rem] sm:mt-0  mt-32  text-center">
+      
+     
+
+        {/* <Textbox lines={lines} typingSpeed={50} delay={5000} /> */}
       </div>
     </div> 
   );

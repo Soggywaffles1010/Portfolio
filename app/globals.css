@@ -2,10 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-.body {
-  background-color: #f7e8ad; /* Example: dark background color */
-  color: #fff; /* Optional: adjust text color for contrast */
+ 
+
+ 
+body.day-mode {
+  background-color: #CAE9FF; /* Light background for day mode */
+  color: #0e2431;           /* Dark text for day mode */
 }
+
+body.night-mode {
+  background-color: #07121a; /* Dark background for night mode */
+  color: #CAE9FF;            /* Light text for night mode */
+}
+
+nav.day-mode {
+  background-color: #c4e2f7; /* Light background for day mode */
+  color: #1B4965;            /* Dark blue font for day mode */
+  margin-top: .5rem;
+  padding: .5rem;
+  box-shadow: 0 4px 8px rgba(2, 55, 93, .2); /* Box shadow with opacity */
+}
+
+nav.night-mode {
+  background-color: #133245 ; /* Dark blue background for night mode */
+  color: #bdd9ed;            /* White font for night mode */
+  margin-top: .5rem;
+  padding: .5rem;
+  box-shadow: 0 4px 8px rgba(15, 39, 55, .2)
+  ;
+}
+ 
 
 
  /* Default svg color */
@@ -460,14 +486,19 @@
   }
 }
 
+/* socialproofs css */
+
 @keyframes scroll-text {
   0% {
-    transform: translateX(20%);
+    transform: translateX(-0%);
   }
   100% {
     transform: translateX(-100%);
   }
 }
+
+
+
 
 .animate-scroll-text {
   animation: scroll-text 25s linear infinite;
