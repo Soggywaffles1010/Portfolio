@@ -14,10 +14,10 @@ const Game: React.FC = () => {
       <div className="flex text-center justify-center items-center h-[90%] relative">
         <div className="md:translate-x-[50%] translate-x-[35%] grid gap-2 text-start items-start">
           {/* Header Text */}
-          <div className="w-full flex flex-wrap gap-1">
-            <p className="text-blue-100 font-bold text-4xl flex flex-grow">Allen Usman</p>
-            <p className="text-white">Graphics Designer / </p>
-            <p className="text-white font-bold">Developer</p>
+          <div className="w-full flex flex-wrap gap-1 text-gray-700">
+            <p className=" font-bold text-4xl flex flex-grow">Allen Usman</p>
+            <p className="">Graphics Designer / </p>
+            <p className=" font-bold">Developer</p>
           </div>
 
           {/* Icon Section */}
