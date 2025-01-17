@@ -143,11 +143,11 @@ const Nav = () => {
                 Projects
               </Button>
               {isDropdownOpen && (
-                <div className="absolute z-10 top-full w-48 bg-gray-800 text-white shadow-lg rounded text-left">
+                <div className="absolute z-10 top-full w-48 dropdown-nav shadow-lg rounded text-left">
                   <ul>
                     <li>
                       <Link
-                        className="block px-4 py-2 hover:bg-gray-700 hover:text-[#00FF00]"
+                        className="custom-button"
                         href="#projects"
                       >
                         UI/UX Designs
@@ -155,7 +155,7 @@ const Nav = () => {
                     </li>
                     <li>
                       <Link
-                        className="block px-4 py-2 hover:bg-gray-700 hover:text-[#00FF00]"
+                        className="custom-button"
                         href="#collaterals"
                       >
                         Graphic Designs
@@ -163,7 +163,7 @@ const Nav = () => {
                     </li>
                     <li>
                       <Link
-                        className="block px-4 py-2 hover:bg-gray-700 hover:text-[#00FF00]"
+                        className="custom-button"
                         href="#movies"
                       >
                         Videos

@@ -23,9 +23,7 @@ const Page = () => {
         <Game />
       </div>
 
-      <div>
-        <Socialproofs />
-      </div>
+      
 
       {/* Projects */}
       <div id="projects">

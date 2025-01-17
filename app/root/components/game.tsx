@@ -1,39 +1,64 @@
 import React from 'react';
 import Spline from '@splinetool/react-spline/next';
-import Textbox from '../../reusable/textbox';
 
-const lines = [
-  "Hello adventurer.",
-  "It is so nice that you came across my portfolio.",
-  "I am Allen, a Graphics designer.",
-  "My love for art is like a never-ending adventure where every stroke brings new possibilities.",
-  "I have helped a lot of business owners in skyrocketing their success exponentially through digital arts.",
-  "From Social media ads to videos, from landing pages to a whole website and apps.",
-  "Are you gonna be my future client?",
-  "I can't wait to work with you, and together let's elevate your business to new heights.",
-];
+import { GoVideo } from "react-icons/go";
+import { SlPicture } from "react-icons/sl";
+import { ImMobile } from "react-icons/im";
+import Link from 'next/link';
+import Socialproofs from './main_components/socialproofs';
 
 const Game: React.FC = () => {
   return (
-    
-    <div className='relative rounded-md h-full'>
+    <div className="relative h-[70vh] flex flex-col">
+      {/* Spline component (60%) */}
+      <div className="flex text-center justify-center items-center h-[90%] relative">
+        <div className="md:translate-x-[50%] translate-x-[35%] grid gap-2 text-start items-start">
+          {/* Header Text */}
+          <div className="w-full flex flex-wrap gap-1">
+            <p className="text-blue-100 font-bold text-4xl flex flex-grow">Allen Usman</p>
+            <p className="text-white">Graphics Designer / </p>
+            <p className="text-white font-bold">Developer</p>
+          </div>
 
-      
-      <Spline
-        scene="https://prod.spline.design/iMsZXsFXWswLMcNe/scene.splinecode" className='hidden  sm:block'
-      />
-          
-           <Spline scene='https://prod.spline.design/UW0Jaiz3aXsaqLsO/scene.splinecode'  className='flex sm:hidden  '/>
+          {/* Icon Section */}
+          <div className="w-full flex flex-col-3 gap-16  md:translate-x-5 -translate-x-6 mt-5 ">
+            {/* Video Icon */}
+            <Link href={"#movies"}>
+            <div className="flex flex-col items-center text-gray-700 hover:text-white">
+              <GoVideo className="text-5xl  transition-transform duration-300 hover:scale-125  hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)]" />
+              <p className=" mt-2 text-xs font-light">Video Projects</p>
+            </div>
+            </Link>
+            <Link href={"#collaterals"}>
+            <div className="flex flex-col items-center text-gray-700 hover:text-white">
+              <SlPicture className="text-5xl  transition-transform duration-300 hover:scale-125  hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)]" />
+              <p className=" mt-2 text-xs font-light">Graphic Designs</p>
+            </div>
+            </Link>
+            <Link href={"#projects"}>
+            <div className="flex flex-col items-center text-gray-700 hover:text-white">
+              <ImMobile className="text-5xl  transition-transform duration-300 hover:scale-125  hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)]" />
+              <p className="t mt-2 text-xs font-light">UI/UX</p>
+            </div>
+            </Link>
            
+          </div>
+        </div>
 
-     
-      <div className="sm:absolute relative bottom-8  left-1/2 transform -translate-x-1/2 w-full  max-w-lg px-4 translate-y-[0rem]  sm:-translate-y-[6rem] sm:mt-0  mt-32  text-center">
-      
-     
-
-        {/* <Textbox lines={lines} typingSpeed={50} delay={5000} /> */}
+        {/* Spline */}
+        <div className="w-full">
+          <Spline
+            scene="https://prod.spline.design/iMsZXsFXWswLMcNe/scene.splinecode"
+            className="w-full h-full hidden md:block "
+          />
+        </div>
       </div>
-    </div> 
+
+      {/* Bottom blue background (20%) */}
+      <div className="h-[10%]">
+         <Socialproofs/>
+      </div>
+    </div>
   );
 };
 

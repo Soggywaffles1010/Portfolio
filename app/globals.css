@@ -31,7 +31,30 @@ nav.night-mode {
   box-shadow: 0 4px 8px rgba(15, 39, 55, .2)
   ;
 }
- 
+.dropdown-nav{
+  background-color:#133245 ;
+}
+.custom-button {
+  display: block;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+  padding-top: 0.5rem; /* py-2 */
+  padding-bottom: 0.5rem; /* py-2 */
+  color:#bdd9ed;
+}
+
+.custom-button:hover {
+  background-color: #59798e; /* gray-700 */
+   
+   
+}
+
+/* hero section */
+
+.hero-section{
+  background-color: rgb(108, 209, 243);
+}
+
 
 
  /* Default svg color */
