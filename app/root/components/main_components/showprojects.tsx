@@ -63,12 +63,12 @@ const HeroSection: React.FC = () => {
 
 
       {/* Contact & Show Projects Buttons */}
-      <div className="flex gap-5">
+      <div className="flex gap-5 min-w-max">
         <Link
           href={"/contact"}
           className="transition-transform duration-300 hover:scale-105 hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)] flex mt-5 items-center text-gray-700 hover:text-white border rounded-md text-center justify-center border-gray-700 hover:border-white"
         >
-          <div className="px-4 py-2 flex gap-2 justify-center items-center">
+          <div className="px-4 py-2 flex gap-2 justify-center items-center bg-gray-700 text-white rounded-md">
             <p>Contact Me</p>
             <FaPhone className="hidden md:block"/>
           </div>
