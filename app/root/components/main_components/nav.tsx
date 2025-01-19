@@ -124,11 +124,25 @@ const Nav = () => {
             aria-label="Basic button group"
             className="hidden md:flex gap-10 items-center"
           >
+              <Button href="/files/December 2024 CV.pdf" 
+                  sx={{
+                    color: isNightMode ? '#bdd9ed' : '#1B4965', // Font color
+                    borderColor: isNightMode ? '#bdd9ed' : '#1B4965', // Border color matches font
+                    '&:hover': {  
+                      borderColor: isNightMode ? '#bdd9ed' : '#1B4965',
+                      fontWeight: 'bold',
+                      
+                    },
+                  }}
+                className="hover:font-semibold transition-transform transform hover:scale-110 ease-out duration-300 ">
+                Download Resume
+              </Button>
             <div
               className="relative"
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
+              
               <Button 
                   sx={{
                     color: isNightMode ? '#bdd9ed' : '#1B4965', // Font color
@@ -269,6 +283,19 @@ const Nav = () => {
                 Contact Me
               </Button>
             </Link>
+            <Button href="/files/December 2024 CV.pdf" 
+                  sx={{
+                    color: isNightMode ? '#bdd9ed' : '#1B4965', // Font color
+                    borderColor: isNightMode ? '#bdd9ed' : '#1B4965', // Border color matches font
+                    '&:hover': {  
+                      borderColor: isNightMode ? '#bdd9ed' : '#1B4965',
+                      fontWeight: 'bold',
+                      
+                    },
+                  }}
+                className="hover:font-semibold transition-transform transform hover:scale-110 ease-out duration-300 ">
+                Download Resume
+              </Button>
           </ButtonGroup>
         </Box>
       )}
