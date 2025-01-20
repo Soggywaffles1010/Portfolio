@@ -14,6 +14,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { SiCsswizardry } from "react-icons/si";
 import { FaHtml5 } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
+import Paging from '@/app/reusable/paging';
 
 
 
@@ -104,12 +105,12 @@ const Projects: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row w-full h-[70vh]">
+    <div className="flex flex-col md:flex-row-reverse w-full h-[50vh]  overflow-visible">
       {/* Left Column: Spline Viewer and Navigation */}
-      <div className="w-full md:w-1/2 flex flex-col justify-center items-center relative">
+      <div className="w-full md:w-1/2 flex flex-col justify-center items-center relative h-[70%] md:h-[100%] ">
         {/* Overlay for Mobile */}
         {showOverlay && (
-          <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50 md:hidden">
+          <div className=" top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50 md:hidden">
             <p className="text-white text-lg">Swipe left or right to navigate</p>
           </div>
         )}
@@ -119,7 +120,7 @@ const Projects: React.FC = () => {
           {scenes.map((scene, index) => (
             <div
               key={index}
-              className={`w-full h-full absolute top-0 left-0 transition-opacity duration-500 ${
+              className={`w-full h-full absolute  top-0 left-0 transition-opacity duration-500 ${
                 index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
               }`}
             >
@@ -127,30 +128,39 @@ const Projects: React.FC = () => {
             </div>
           ))}
         </div>
-
-        {/* Navigation Buttons */}
-        <div className="flex justify-between w-full px-8 py-4 absolute">
-          <button
-            onClick={handlePrevious}
-            className="px-4 py-2 z-50 rounded-full border border-gray-300 bg-gray-100 hover:bg-gray-200"
-          >
-            <GrFormPrevious size={24} />
-          </button>
-          <button
-            onClick={handleNext}
-            className="px-4 py-2 z-50 rounded-full border border-gray-300 bg-gray-100 hover:bg-gray-200"
-          >
-            <MdNavigateNext size={24} />
-          </button>
-        </div>
+        <div className="z-50 md:translate-y-0 translate-y-[170%]">
+  <Paging
+    onPrevious={handlePrevious}
+    onNext={handleNext}
+    count={scenes.length} // Dynamically set the number of pages
+  />
+  
+</div>
+<div className=' absolute md:hidden'>
+          {desc[currentIndex] && (
+          <Textbox
+            lines={[desc[currentIndex]]}
+            typingSpeed={10}
+            delay={50}
+            prototype={[prototypes[currentIndex]]} // Pass only the current prototype link
+            title={[titles[currentIndex]]}      
+            tools={[tools[currentIndex]]}
+            />
+            )}
       </div>
 
+        
+
+       
+         
+      </div>
+  
+
       {/* Right Column: Textbox */}
-      <div className="w-full md:w-1/2 flex flex-col items-center justify-center  p-4 ">
-        {/* Title instantly displayed */}
+      <div className="w-full md:w-1/2  flex-col items-center justify-center md:h-[100%] h-[10%] p-4 hidden md:flex ">
         
         
-        {/* Textbox for description and prototype */}
+         
         {desc[currentIndex] && (
           <Textbox
             lines={[desc[currentIndex]]}
@@ -162,6 +172,7 @@ const Projects: React.FC = () => {
             />
         )}
       </div>
+   
     </div>
   );
 };

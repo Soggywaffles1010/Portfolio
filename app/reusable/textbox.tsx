@@ -75,15 +75,15 @@ const Textbox: React.FC<TextboxProps> = ({
   }, [currentLine, title, prototype, tools]);
 
   return (
-    <div className="relative flex flex-col gap-2 rounded-lg p-4 w-full text-gray-700 h-[100vh]">
+    <div className="relative flex flex-col md:gap-2 gap-0 rounded-lg p-4 w-full text-gray-700 h-[100vh] md:translate-y-0 translate-y-[72%]">
       {/* Dynamic Title (updates instantly) */}
-      <p className="font-bold text-2xl h-[10%]">{displayedTitle}</p>
+      <p className="font-bold text-2xl h-[10%] text-center md:text-start">{displayedTitle}</p>
 
       {/* Typing Text (with animation) */}
-      <p className="sm:text-lg text-md whitespace-pre-wrap md:h-[50%] h-[30%] ">{displayedText}</p>
+      <p className="sm:text-lg text-md whitespace-pre-wrap md:h-[50%] h-[11%] truncate md:translate-y-0 -translate-y-[55%] ">{displayedText}</p>
 
       {/* Dynamic Tools (updates with delay) */}
-      <div className="flex flex-row gap-5 mt-3">
+      <div className="flex flex-row gap-5 mt-3 md:translate-y-0 -translate-y-[380%] md:justify-start justify-center">
         {displayedTools.map((tool, index) => (
           <div key={index}>{tool}</div>
         ))}
@@ -92,11 +92,18 @@ const Textbox: React.FC<TextboxProps> = ({
       {/* Dynamic Prototype Link */}
       <Link
         href={currentPrototype}
-        className="transition-transform duration-300 flex mt-5 items-center text-gray-700 rounded-md"
+        className="transition-transform duration-300 flex mt-5 items-center text-gray-700 rounded-md md:translate-y-0 -translate-y-[150%] md:justify-start justify-center"
       >
+        <div className='flex gap-10'>
         <div className="px-4 py-2 flex gap-2 justify-start items-center border hover:border-gray-700 hover:bg-gray-400 bg-gray-500 hover:text-gray-700 text-white rounded-md">
-          <p>Show Live Prototype</p>
+          <p className='hidden md:block'>Show Live Prototype</p>
+          <p className='block md:hidden'>Prototype</p>
           <IoNavigateOutline className="hidden md:block" />
+        </div>
+        <div className="px-4 py-2 flex gap-2 justify-start items-center border md:hidden  border-gray-700 text-gray-700 rounded-md">
+          <p className=''>Read more</p>
+         
+        </div>
         </div>
       </Link>
     </div>
