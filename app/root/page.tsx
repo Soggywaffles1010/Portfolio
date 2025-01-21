@@ -1,11 +1,12 @@
 import React from 'react';
 import Nav from './components/main_components/nav';
-import Hero from './components/main_components/hero';
 import Game from './components/game';
 import Socialproofs from './components/main_components/socialproofs';
 import Projects from './components/main_components/projects';
 import Collaterals from './components/main_components/collaterals';
-import Movie from './components/main_components/movie';
+import Videoproject from './components/main_components/videoproject';
+import Testimonials from './components/main_components/testimonials';
+
 
  
 
@@ -23,7 +24,9 @@ const Page = () => {
         <Game />
       </div>
 
-      
+      <div>
+      <Socialproofs/>
+      </div>
 
       {/* Projects */}
       <div id="projects">
@@ -37,7 +40,11 @@ const Page = () => {
 
       {/* Movies */}
       <div id="movies">
-        <Movie />
+        <Videoproject />
+        
+      </div>
+      <div>
+        <Testimonials/>
       </div>
     </div>
   );

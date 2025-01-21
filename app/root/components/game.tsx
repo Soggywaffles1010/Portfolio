@@ -29,7 +29,7 @@ const Game: React.FC = () => {
 
       {/* Bottom blue background (20%) */}
       <div className="h-[10%] md:mt-0 mt-16">
-         <Socialproofs/>
+        
       </div>
     </div>
   );
