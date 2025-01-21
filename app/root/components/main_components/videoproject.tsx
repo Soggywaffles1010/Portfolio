@@ -139,7 +139,7 @@ const Videoproject: React.FC = () => {
     return (
       <div className="h-screen bg-black">
     
-        <div className='h-[50%] block md:hidden'>
+        {/* <div className='h-[50%] block md:hidden'>
         <Moviemobile
   title={currentCard.title}
   description={currentCard.description}
@@ -147,8 +147,8 @@ const Videoproject: React.FC = () => {
   link={currentCard.link}
 />
 
-        </div>
-        <div className='h-[50%] hidden md:block'>
+        </div> */}
+        <div className='h-[50%] '>
         <Movie2
   title={currentCard.title}
   description={currentCard.description}
