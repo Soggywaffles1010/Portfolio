@@ -20,6 +20,13 @@ const Paging: React.FC<PagingProps> = ({ onPrevious, onNext, count }) => {
           <PaginationItem
             slots={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}
             {...item}
+            sx={{
+              color: 'white', // Set text color
+              '&.Mui-selected': {
+                color: 'white', // Text color for selected page
+                backgroundColor: 'gray', // Background color for selected page
+              },
+            }}
           />
         )}
         onChange={(event, page) => {

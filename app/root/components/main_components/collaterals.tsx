@@ -3,6 +3,7 @@ import React, { useState,  useEffect } from 'react'
 import Image from 'next/image'
 import { GrFormPrevious } from 'react-icons/gr';
 import { MdNavigateNext } from 'react-icons/md';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const collaterals: React.FC =  () => {
   
@@ -87,7 +88,7 @@ const collaterals: React.FC =  () => {
     <div className='h-screen flex flex-col justify-center  relative overflow-hidden'>
        <div className=' flex justify-center gap-10 w-full absolute z-10 text-center  font-semibold text-3xl my-10'>
       
-        <div className='my-auto '>
+        <div className='my-auto hidden md:block '>
         <button onClick={handlePrevious} className='px-4 py-4 hover:border-0 bg-blue-500 text-white rounded-full border bg-opacity-0 border-opacity-50 border-white hover:bg-blue-300 hover:text-black'>
           <GrFormPrevious />
         </button>
@@ -95,14 +96,14 @@ const collaterals: React.FC =  () => {
           {images.map((image, index) => (
   <div
     key={index}
-    className={`  gap-10 h-screen relative flex flex-col w-screen   ${index === currentIndex ? '' : 'hidden'} transition-opacity duration-500 ease-in-out`}
+    className={`  gap-10 h-[100vh] relative flex flex-col w-full   ${index === currentIndex ? '' : 'hidden'} transition-opacity duration-500 ease-in-out`}
   >
     <div className="  h-[20vh] items-center text-center mt-32">
       <h1 className="font-semibold tracking-wider text-2xl md:text-4xl">{image.title}</h1>
     </div>
 
     <div
-      className={`flex justify-center ${animationClass} rounded-md md:h-[60vh] h-[40vh] `}
+      className={`flex justify-center ${animationClass} rounded-md md:h-[60vh] h-[40vh]`}
       style={{ maxWidth: '100%', display: 'flex', justifyContent: 'center' }}
     >
       <Image
@@ -114,7 +115,10 @@ const collaterals: React.FC =  () => {
         layout="intrinsic"
       />
     </div>
-    <div className={`text-center md:h-[20vh] flex justify-center gap-8 h-[10vh] `}>
+    <div className={`text-center md:h-[20vh] flex justify-center gap-8 h-[10vh] z-20 `}>
+    <button onClick={handlePrevious} className="text-gray-400 hover:text-gray-200 disabled:opacity-50 md:hidden block ">
+    <FaChevronLeft size={20} />
+        </button>
     {(image.tools || []).map((tool, toolIndex) => (
         <img
           key={toolIndex}
@@ -123,12 +127,19 @@ const collaterals: React.FC =  () => {
           style={{ width: '40px', height: '40px', margin: '5px' }}
         />
       ))}
+        <button
+                          className="text-gray-400 hover:text-gray-200 disabled:opacity-50 md:hidden block "
+                          onClick={() => handleNext}
+                         
+                        >
+                          <FaChevronRight size={20} />
+                        </button>
     </div>
   </div>
 ))}
-        <div className='my-auto'>
+        <div className='my-auto hidden md:block'>
         <button onClick={handleNext} className='px-4 py-4 hover:border-0 bg-blue-500 text-white rounded-full border bg-opacity-0 border-opacity-50 border-white hover:bg-blue-300 hover:text-black'>
-          <MdNavigateNext />
+          <MdNavigateNext/>
         </button>
         </div>
           
