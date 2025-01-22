@@ -42,34 +42,34 @@ const Movie2: React.FC<HeroSectionProps> = ({ title, description, image, link })
 
   return (
     <section
-      className="relative bg-center flex h-[50vh] bg-no-repeat bg-cover bg-gray-700 bg-blend-multiply transition-all ease-in-out duration-500"
+      className=" relative bg-center flex 2xl:flex-row flex-col h-[50vh] bg-no-repeat bg-cover  bg-blend-multiply transition-all ease-in-out duration-500"
       style={{ backgroundImage: `url(${image})` }}
     >
       {/* Autoplay iframe */}
       <iframe
       ref={iframeRef}
-        className="absolute top-0 left-0 w-full h-full"
-        src={`${image}?autoplay=1&controls=0&mute=0&enablejsapi=1`} // Start unmuted
+        className="2xl:absolute relative top-0 left-0 w-full 2xl:h-[100%] h-[80%]"
+        src={`${image}?autoplay=1&controls=0&mute=1&enablejsapi=1`} // Start unmuted
         allow="autoplay; fullscreen"
         frameBorder="0"
       />
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+      <div className="absolute 2xl:block hidden inset-0 bg-black bg-opacity-40 z-10 "></div>
 
       {/* Content */}
-      <div className="relative px-4 ml-16 max-w-screen-sm text-start my-auto z-20">
-        <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+      <div className="2xl:absolute relative 2xl:px-4 sm:px-2 2xl:ml-16 ml-2 w-full 2xl:max-w-screen-sm  text-start my-auto z-20 2xl:h-[100%] h-[20%]">
+        <h1 className="2xl:mb-4 mb-1 sm:text-xl font-extrabold 2xl:tracking-tight tracking-normal leading-none text-white  2xl:text-6xl">
           {title}
         </h1>
-        <p className="mb-8 text-lg font-normal text-start text-gray-200 lg:text-xl">
+        <p className="mb-8 sm:text-sm 2xl:text-lg font-normal text-start text-gray-200 ">
           {description}
         </p>
-        <div className="flex gap-5">
+        <div className="flex gap-5 justify-center 2xl:justify-start">
           {/* Primary Link */}
           <Link
             href={link.href}
-            className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg bg-white hover:bg-gray-700 hover:text-white"
+            className="inline-flex justify-center items-center 2xl:py-3 py-1 2xl:px-5 px-2 2xl:text-base text-sm font-medium text-center text-gray-700 rounded-lg bg-white hover:bg-gray-700 hover:text-white"
           >
             Watch on YouTube
           </Link>
@@ -78,15 +78,23 @@ const Movie2: React.FC<HeroSectionProps> = ({ title, description, image, link })
           
           <button
         onClick={togglePlayPause}
-        className="inline-flex justify-center items-center gap-2 py-3 px-5 text-base font-medium text-center text-white border border-white rounded-lg bg-transparent hover:bg-white hover:text-gray-700"
+        className="inline-flex justify-center items-center gap-2 py-1 px-2 2xl:py-3 2xl:px-5 2xl:text-base text-sm font-medium text-center text-white border border-white rounded-lg bg-transparent hover:bg-white hover:text-gray-700"
       >
         {isPlaying ? <FaPause /> : <FaPlay />}
         {isPlaying ? 'Pause' : 'Play'}
       </button>
+
+      <Link
+  href="/contact"
+  className="2xl:hidden inline-flex justify-center items-center 2xl:py-3 py-1 2xl:px-5 px-2 2xl:text-base text-sm font-medium text-center text-gray-700 rounded-lg bg-white hover:bg-gray-700 hover:text-white"
+>
+  <FaEnvelope />
+  Contact Me
+</Link>
         </div>
         <Link
   href="/contact"
-  className="inline-flex justify-center items-center gap-1 py-2 mt-5 px-3 text-base font-medium text-center text-white border border-white rounded-lg bg-transparent hover:bg-white hover:text-gray-700"
+  className="hidden 2xl:inline-flex justify-center items-center gap-1 py-2 mt-5 px-3 text-base font-medium text-center text-white border border-white rounded-lg bg-transparent hover:bg-white hover:text-gray-700"
 >
   <FaEnvelope />
   Contact Me

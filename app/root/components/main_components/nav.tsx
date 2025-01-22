@@ -11,7 +11,7 @@ import { Box, Button } from '@mui/material';
 const Nav = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isNightMode, setIsNightMode] = useState(false);
+  const [isNightMode, setIsNightMode] = useState(true);
 
   const handleModeChange = () => {
     setIsNightMode(!isNightMode);

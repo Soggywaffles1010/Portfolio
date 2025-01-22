@@ -39,13 +39,19 @@ const Projects: React.FC = () => {
     'https://trachbyallen.vercel.app/',
   ];
   const desc = [
-    "As the sole UI/UX designer at Quantumtek, a premier online betting platform, my primary responsibility was to create the landing page. It was crucial to ensure a seamless workflow and adhere to brand guidelines meticulously. Collaborating closely with a team of developers, I aimed to deliver an exceptional user experience. The design phase of the project was completed in about one and a half months, from November 2024 to December 2024, and the project is currently still under development. My main tool was Figma, supplemented by Adobe Illustrator, Photoshop, and some AI-enhancing applications.",
-    'Medgrocer is an online pharmaceutical company dedicated to delivering Filipinos the fastest and most accessible medicine from the comfort of their own homes. This was my first UI/UX redesign project, where I worked as an intern alongside a senior designer and a team of fresh graduate developers. The brand guidelines and workflow were already established, so my focus was solely on the redesign. I started the project in April 2022 and completed it in July 2022 using Figma.',
-    "MAthayog is an application designed to supplement and enhance children's math skills through fun and interactive online games. The team consisted of education professionals, developers, and marketing experts. I was the sole individual responsible for all graphics and UI/UX design. The project took one year to complete, from July 2023 to July 2024, and is currently exclusively used by DEPED students in the NCR. While it is yet to launch nationwide, additional funding is required. My main tool was Figma, with supplementary tools in Adobe Illustrator.",
-    'Terramartz is an online marketplace for farm produce, aiming to connect farmers and sell their products through our app. My main roles were Project Manager and Graphics Designer. I utilized multiple tools to manage this project, which started in April 2024 and concluded in September 2024. Project is still looking for an Angel Investor',
-    'Adonis is a mobile application designed for a local fitness gym.',
-    "Trach is my first full-stack web development project, which I completed as a one-man team. From branding to design to development, I single-handedly created this app. Trach serves as a real estate agent hub for people looking to buy, rent, or sell property. The app is fully functional, featuring Google location of estates, agent search in the USA, messaging, and payment gateway integration. However, due to a lack of funding, the APIs used in the app have been halted, and the launch has been paused. I used Next.jsfor this project, which I started in February 2024 and completed in April 2024.",
+    "As the sole UI/UX designer at Quantumtek, a premier online betting platform, my primary responsibility was to create the landing page. It was crucial to ensure a seamless workflow and adhere to brand guidelines meticulously. The design phase of the project was completed from November 2024 to December 2024.",
+    
+    "Medgrocer is an online pharmaceutical company committed to providing Filipinos with quick and accessible medicine from the comfort of their homes. This was my first UI/UX redesign project, where I worked as an intern alongside a senior designer and developers. The project lasted from April 2022 to July 2022, and Figma was my primary design tool.",
+  
+    "Mathayog is an app designed to enhance children's math skills through fun, interactive games. I worked as the sole graphics and UI/UX designer alongside educators and developers. The project took one year to complete, from July 2023 to July 2024, and is currently used exclusively by DEPED students in NCR. My main tools were Figma and Illustrator.",
+  
+    "Terramartz is an online marketplace for farm produce that connects farmers with buyers. I served as Project Manager and Graphics Designer, overseeing the app's development and design. The project ran from April 2024 to September 2024. While the platform is complete, it is actively seeking an Angel Investor for expansion and scaling opportunities.",
+  
+    "Adonis is a mobile application designed to enhance the customer experience for a local fitness gym. My role involved creating the entire UI/UX design for the app, ensuring ease of navigation and adherence to the fitness brand's identity. While the app's initial launch is in progress, additional updates are planned for future phases.",
+  
+    "Trach is my first full-stack web development project, completed as a one-man team. I handled everything from branding and design to development. Trach is a real estate agent hub that supports property buying, renting, and selling. Built with Next.js, the app is fully functional but paused due to funding issues. The project ran from February 2024 to April 2024.",
   ];
+  
   const tools = [
     [<FaFigma key='figma' />, <SiAdobeillustrator />,],
     [<FaFigma key='figma' />],
@@ -136,7 +142,7 @@ const Projects: React.FC = () => {
   />
   
 </div>
-<div className=' absolute md:hidden'>
+<div className=' sm:absolute md:hidden'>
           {desc[currentIndex] && (
           <Textbox
             lines={[desc[currentIndex]]}

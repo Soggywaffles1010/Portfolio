@@ -20,16 +20,16 @@ const Page = () => {
        
 
       {/* Content Sections */}
-      <div>
+      <div className=''>
         <Game />
       </div>
 
-      <div>
+      <div className=''>
       <Socialproofs/>
       </div>
 
       {/* Projects */}
-      <div id="projects">
+      <div id="projects" className=''>
         <Projects />
       </div>
 

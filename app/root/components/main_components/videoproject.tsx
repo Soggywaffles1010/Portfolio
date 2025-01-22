@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Movie2 from './movie2';
 import Videocard from './videocard';
 import Moviemobile from './moviemobile';
+import Category from './category';
  
 
 const Videoproject: React.FC = () => {
@@ -128,41 +129,39 @@ const Videoproject: React.FC = () => {
         },
       ];
       
-  
-    const [currentCard, setCurrentCard] = useState({
-      title: 'Video Edits',
-      description: 'This section contains my most recent video projects ranging from shorts to long form content. Click play now to preview the videos. ',
-      video: 'https://www.youtube.com/embed/S9pZzQqz5yQ',
-      link: { text: 'Default Link', href: 'https://www.youtube.com/embed/S9pZzQqz5yQ' },
-    });
-  
-    return (
-      <div className="h-screen bg-black">
+      const [currentCategory, setCurrentCategory] = useState<string>('Documentary');
+      const [currentCard, setCurrentCard] = useState({
+        title: 'Video Edits',
+        description: 'This section contains my most recent video projects...',
+        video: 'https://www.youtube.com/embed/S9pZzQqz5yQ',
+        link: { text: 'Default Link', href: 'https://www.youtube.com/embed/S9pZzQqz5yQ' },
+      });
     
-        {/* <div className='h-[50%] block md:hidden'>
-        <Moviemobile
-  title={currentCard.title}
-  description={currentCard.description}
-  image={currentCard.video}  // The embed link from the current card
-  link={currentCard.link}
-/>
-
-        </div> */}
-        <div className='h-[50%] '>
-        <Movie2
-  title={currentCard.title}
-  description={currentCard.description}
-  image={currentCard.video}  // The embed link from the current card
-  link={currentCard.link}
-/>
-
-        </div>
-        
-        <div className="translate-y-[10%] h-[50%]">
-          <Videocard cards={videoCards} onHover={setCurrentCard} />
-        </div>
-      </div>
-    );
-  };
+      // Filter videos by selected category
+      const filteredVideos = videoCards.find((vc) => vc.category === currentCategory)?.videos || [];
+    
   
-  export default Videoproject;
+      return (
+        <div className="h-[100vh] bg-[#07121a] rounded-md">
+          <div className="h-[50%] ">
+            <Movie2
+              title={currentCard.title}
+              description={currentCard.description}
+              image={currentCard.video}
+              link={currentCard.link}
+            />
+          </div>
+          <div className='h-[20%]'>
+            <Category
+              categories={videoCards.map((vc) => vc.category)}
+              onSelectCategory={setCurrentCategory}
+            />
+          </div>
+          <div className="h-[30%]">
+            <Videocard cards={[{ category: currentCategory, videos: filteredVideos }]} onHover={setCurrentCard} />
+          </div>
+        </div>
+      );
+    };
+    
+    export default Videoproject;

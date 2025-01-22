@@ -75,7 +75,7 @@ const Textbox: React.FC<TextboxProps> = ({
   }, [currentLine, title, prototype, tools]);
 
   return (
-    <div className="relative flex flex-col md:gap-2 gap-0 rounded-lg p-4 w-full text-gray-700 h-[100vh] md:translate-y-0 translate-y-[72%]">
+    <div className="relative flex flex-col md:gap-2 gap-0 rounded-lg p-4 w-full text-gray-700 h-[100vh] md:translate-y-[20%] lg:translate-y-[10%] translate-y-[72%]">
       {/* Dynamic Title (updates instantly) */}
       <p className="font-bold text-2xl h-[10%] text-center md:text-start">{displayedTitle}</p>
 
