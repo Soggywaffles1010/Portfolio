@@ -114,13 +114,8 @@ const Projects: React.FC = () => {
     <div className="flex flex-col md:flex-row-reverse w-full h-[50vh]  overflow-visible">
       {/* Left Column: Spline Viewer and Navigation */}
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center relative h-[70%] md:h-[100%] ">
-        {/* Overlay for Mobile */}
-        {showOverlay && (
-          <div className=" top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50 md:hidden">
-            <p className="text-white text-lg">Swipe left or right to navigate</p>
-          </div>
-        )}
-
+        
+     
         {/* Spline Viewer */}
         <div className="flex-grow flex items-center justify-center">
           {scenes.map((scene, index) => (
@@ -134,7 +129,7 @@ const Projects: React.FC = () => {
             </div>
           ))}
         </div>
-        <div className="z-50 md:translate-y-0 translate-y-[170%]">
+        <div className="z-50 hidden md:block ">
   <Paging
     onPrevious={handlePrevious}
     onNext={handleNext}
@@ -143,6 +138,7 @@ const Projects: React.FC = () => {
   
 </div>
 <div className=' sm:absolute md:hidden'>
+  
           {desc[currentIndex] && (
           <Textbox
             lines={[desc[currentIndex]]}
@@ -178,7 +174,14 @@ const Projects: React.FC = () => {
             />
         )}
       </div>
-   
+      <div className="z-50 flex md:hidden mx-auto ">
+  <Paging
+    onPrevious={handlePrevious}
+    onNext={handleNext}
+    count={scenes.length} // Dynamically set the number of pages
+  />
+  
+</div>
     </div>
   );
 };

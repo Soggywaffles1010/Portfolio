@@ -26,11 +26,6 @@ const Game: React.FC = () => {
           />
         </div>
       </div>
-
-      {/* Bottom blue background (20%) */}
-      <div className="h-[10%] md:mt-0 mt-16">
-        
-      </div>
     </div>
   );
 };
