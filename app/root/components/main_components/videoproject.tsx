@@ -151,7 +151,7 @@ const Videoproject: React.FC = () => {
               link={currentCard.link}
             />
           </div>
-          <div className='h-[20%]'>
+          <div className='h-[10%] md:h-[20%]'>
             <Category
               categories={videoCards.map((vc) => vc.category)}
               onSelectCategory={setCurrentCategory}

@@ -98,7 +98,7 @@ const collaterals: React.FC =  () => {
     key={index}
     className={`  gap-10 h-[100vh] relative flex flex-col w-full   ${index === currentIndex ? '' : 'hidden'} transition-opacity duration-500 ease-in-out`}
   >
-    <div className="  h-[20vh] items-center text-center mt-32">
+    <div className="  h-[20vh] items-center text-center mt-32 md:translate-y-[0%] translate-y-[50%] ">
       <h1 className="font-semibold tracking-wider text-2xl md:text-4xl">{image.title}</h1>
     </div>
 
@@ -116,7 +116,7 @@ const collaterals: React.FC =  () => {
       />
     </div>
     <div className={`text-center md:h-[20vh] flex justify-center gap-8 h-[10vh] z-20 `}>
-    <button onClick={handlePrevious} className="text-gray-400 hover:text-gray-200 disabled:opacity-50 md:hidden block ">
+    <button onClick={handlePrevious} className="text-gray-400 hover:text-gray-200  md:hidden block ">
     <FaChevronLeft size={20} />
         </button>
     {(image.tools || []).map((tool, toolIndex) => (
@@ -128,8 +128,8 @@ const collaterals: React.FC =  () => {
         />
       ))}
         <button
-                          className="text-gray-400 hover:text-gray-200 disabled:opacity-50 md:hidden block "
-                          onClick={() => handleNext}
+                          className="text-gray-400 hover:text-gray-200  md:hidden block "
+                          onClick={handleNext}
                          
                         >
                           <FaChevronRight size={20} />
