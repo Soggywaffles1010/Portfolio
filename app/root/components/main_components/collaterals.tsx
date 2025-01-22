@@ -98,11 +98,11 @@ const collaterals: React.FC =  () => {
     className={`  gap-10 h-screen relative flex flex-col w-screen   ${index === currentIndex ? '' : 'hidden'} transition-opacity duration-500 ease-in-out`}
   >
     <div className="  h-[20vh] items-center text-center mt-32">
-      <h1 className="font-semibold tracking-wider text-4xl">{image.title}</h1>
+      <h1 className="font-semibold tracking-wider text-2xl md:text-4xl">{image.title}</h1>
     </div>
 
     <div
-      className={`flex justify-center ${animationClass} rounded-md h-[60vh]`}
+      className={`flex justify-center ${animationClass} rounded-md md:h-[60vh] h-[40vh] `}
       style={{ maxWidth: '100%', display: 'flex', justifyContent: 'center' }}
     >
       <Image
@@ -114,7 +114,7 @@ const collaterals: React.FC =  () => {
         layout="intrinsic"
       />
     </div>
-    <div className={`text-center h-[20vh] flex justify-center gap-8 `}>
+    <div className={`text-center md:h-[20vh] flex justify-center gap-8 h-[10vh] `}>
     {(image.tools || []).map((tool, toolIndex) => (
         <img
           key={toolIndex}
@@ -163,19 +163,7 @@ const collaterals: React.FC =  () => {
        
        
       </div>
-      {/* <div className='flex flex-row justify-between bg-blue-50'>
-       <div className='flex flex-grow bg-red-500 justify-center'>
-            left
-       </div>
-       <div className='flex flex-grow  bg-red-700 justify-center'>
-            Right
-       </div>
-      
-      </div>
-      <div className='  bg-red-900 flex justify-center'>
-        Center down
-      </div> */}
-     
+ 
     </div>
   )
 }

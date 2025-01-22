@@ -83,7 +83,7 @@ const Textbox: React.FC<TextboxProps> = ({
       <p className="sm:text-lg text-md whitespace-pre-wrap md:h-[50%] h-[11%] truncate md:translate-y-0 -translate-y-[55%] ">{displayedText}</p>
 
       {/* Dynamic Tools (updates with delay) */}
-      <div className="flex flex-row gap-5 mt-3 md:translate-y-0 -translate-y-[380%] md:justify-start justify-center">
+      <div className="flex flex-row gap-5 md:mt-3 mt-5 md:translate-y-0 -translate-y-[380%] md:justify-start justify-center">
         {displayedTools.map((tool, index) => (
           <div key={index}>{tool}</div>
         ))}

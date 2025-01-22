@@ -69,14 +69,14 @@ const HeroSection: React.FC = () => {
           onClick={toggleProjects}
           className="sm:py-1 px-4 md:py-2 md:px-5 transition-transform duration-300 hover:scale-105 hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)] flex mt-5 items-center text-gray-700 hover:text-white border rounded-md text-center justify-center border-gray-700 hover:border-white"
         >
-          <div className="flex gap-2 justify-center items-center">
+          <div className="flex gap-2 justify-center items-center ">
             <p className="sm:text-xs md:text-base">Show Projects</p>
             <BsFiles className="hidden md:block" />
           </div>
         </button>
       </div>
 
-      <div className="w-full flex flex-col-3 gap-16 md:translate-x-0 -translate-x-6 mt-5">
+      <div className="w-full flex flex-col-3 gap-16 mt-5 ">
         <Link href={"https://www.facebook.com/allenrhoy.usman"}>
           <div className="flex flex-col items-center text-gray-700 hover:text-white">
             <FaFacebook className="text-xl transition-transform duration-300 hover:scale-125 hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)]" />
